@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>SaSite</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        .bg {
+            overflow: hidden;
+            /*background: #ffdae5;*/
+            background: linear-gradient(45deg,
+                    #f2a0d3,
+                    #f9f9f9),
+                url(https://grainy-gradients.vercel.app/noise.svg);
+            ;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /*
+    background-image: url('../../assets/resources/image.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    */
+        }
+
+        .petal {
+            width: 2px;
+            height: 8px;
+            position: absolute;
+            transform: rotate(45deg);
+            animation: fall 10s ease-in-out infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateX(-50%) rotate(45deg);
+            }
+
+            100% {
+                transform: translateX(-50%) rotate(45deg) translateY(100%);
+            }
+        }
+
+        .card {
+            width: 60vw;
+            height: 80vh;
+            border: 2px solid #fff;
+            position: relative;
+            margin: 20px auto;
+            padding: 1rem;
+            /*
+    backdrop-filter:blur(2px);
+    */
+        }
+
+        .card::after {
+            content: '';
+            position: absolute;
+            left: -10px;
+            right: -10px;
+            top: -10px;
+            bottom: -10px;
+            border: 4px solid #fff;
+        }
+
+        .card .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .card .header .anchor {
+            border-bottom: 1px solid #000;
+            font-size: 1.2rem;
+        }
+
+        .card .content {
+            text-align: center;
+            padding: 2rem;
+            letter-spacing: 2px;
+        }
+
+        .card .content .people {
+            display: flex;
+            justify-content: center;
+        }
+
+        .card .content .people .title {
+            margin-bottom: 1rem;
+        }
+
+        .card .content .people .name {
+            margin: 1.5rem;
+        }
+
+        .card .content .invite {
+            margin: 1.2rem auto;
+        }
+
+        .card .content .address {
+            margin-top: 1.5rem;
+        }
+
+        .mountain,
+        .mountain-two,
+        .mountain-three {
+            position: absolute;
+            bottom: 0;
+            left: 100px;
+            border-left: 200px solid transparent;
+            border-right: 200px solid transparent;
+            border-bottom: 240px solid #3dc374;
+            z-index: 1;
+        }
+
+        .mountain-two {
+            left: 320px;
+            bottom: -80px;
+            z-index: 0;
+            border-bottom: 240px solid #8ce285;
+        }
+
+        .mountain-three {
+            left: -60px;
+            bottom: -10px;
+            z-index: 0;
+            border-bottom: 240px solid #308352;
+        }
+
+        .mountain-top {
+            position: absolute;
+            right: -65px;
+            border-left: 65px solid transparent;
+            border-right: 65px solid transparent;
+            border-bottom: 77px solid #eff8ee;
+            z-index: 2;
+        }
+
+        .mountain-cap-1,
+        .mountain-cap-2,
+        .mountain-cap-3 {
+            position: absolute;
+            top: 70px;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-top: 25px solid #eff8ee;
+        }
+
+        .mountain-cap-1 {
+            left: -55px;
+        }
+
+        .mountain-cap-2 {
+            left: -25px;
+        }
+
+        .mountain-cap-3 {
+            left: 5px;
+        }
+
+        @keyframes cloud {
+            0% {
+                left: -50px;
+            }
+
+            100% {
+                left: 100vw;
+            }
+        }
+
+        .e1 {
+            height: 60%;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border-radius: 30% / 50%;
+            background-color: #fff;
+        }
+
+        .e2 {
+            width: 35%;
+            padding-top: 35%;
+            position: absolute;
+            top: 15%;
+            left: 15%;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+
+        .e3 {
+            width: 50%;
+            padding-top: 50%;
+            position: absolute;
+            top: 0;
+            right: 18%;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+
+        #cloud1 {
+            width: 120px;
+            height: 60px;
+            position: absolute;
+            bottom: 240px;
+            animation: cloud 40s infinite linear;
+        }
+
+        #cloud2 {
+            width: 80px;
+            height: 40px;
+            position: absolute;
+            bottom: 100px;
+            animation: cloud 50s infinite linear;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div class="card">
+            <div class="header">
+                <div class="anchor">電子回函</div>
+                <div class="anchor">IG濾鏡</div>
+                <div class="anchor">交通資訊</div>
+            </div>
+            <div class="content">
+                <p>We Are Married</p>
+                <p>誠摯邀請您一同來分享我們的喜悅</p>
+                <div class="people">
+                    <div class="name groom">
+                        <div class="title">THE GROOM</div>
+                        <div class="ch">蔡沅峰 SEAN</div>
+                    </div>
+                    <div class="name bride">
+                        <div class="title">THE BRIDE</div>
+                        <div class="ch">王曼蘋 APO</div>
+                    </div>
+                </div>
+                <div class="people">
+                    <div class="name groom">
+                        <div class="title">GROOM's PARENTS</div>
+                        <div class="ch">XXX</div>
+                    </div>
+                    <div class="name groom">
+                        <div class="title">BRIDE'S PARENTS</div>
+                        <div class="ch">XXX</div>
+                    </div>
+                </div>
+                <div class="invite">
+                    ~~~~~~~ 敬邀 ~~~~~~~
+                </div>
+                <div class="date">
+                    <div>2024.04.28 星期日</div>
+                    <div>中午 12:00 開始入場</div>
+                </div>
+                <div class="address">
+                    <div>新店彭園婚宴會館</div>
+                    <div>新北市新店區北新路三段219號2樓</div>
+                </div>
+            </div>
+        </div>
+        <div class="sakura">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+        </div>
+        <div class="mountain">
+            <div class="mountain-top">
+                <div class="mountain-cap-1"></div>
+                <div class="mountain-cap-2"></div>
+                <div class="mountain-cap-3"></div>
+            </div>
+        </div>
+        <div class="mountain-two">
+            <div class="mountain-top">
+                <div class="mountain-cap-1"></div>
+                <div class="mountain-cap-2"></div>
+                <div class="mountain-cap-3"></div>
+            </div>
+        </div>
+        <div class="mountain-three">
+            <div class="mountain-top">
+                <div class="mountain-cap-1"></div>
+                <div class="mountain-cap-2"></div>
+                <div class="mountain-cap-3"></div>
+            </div>
+        </div>
+        <!--
+        <div class="cloud"></div>
+        <div class="cloud slow"></div>
+        -->
+        <div id="cloud1">
+            <div class="e1"></div>
+            <div class="e2"></div>
+            <div class="e3"></div>
+        </div>
+        <div id="cloud2">
+            <div class="e1"></div>
+            <div class="e2"></div>
+            <div class="e3"></div>
+        </div>
+    </div>
+</body>
+
+</html>
