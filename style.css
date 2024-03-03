@@ -8,7 +8,7 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    background: radial-gradient(circle farthest-corner at left, #fedcb6, #fffaf4);
+    background: radial-gradient(circle farthest-corner at 0 90%, #fedcb6, #fffaf4);
     letter-spacing: 1px;
 }
 
@@ -76,6 +76,7 @@ body {
 }
 
 .card {
+    width: 100vw;
     height: 70vh;
     margin: 1.2rem auto;
     padding: 2px;
@@ -85,12 +86,11 @@ body {
     overflow-y: auto;
     overflow-x: hidden;
     border-radius: 1rem;
-    background: #ffffff44;
+    background: #ffffff25;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
 }
-
 
 .card .header {
     display: flex;
@@ -135,15 +135,72 @@ body {
     margin-top: 1.5rem;
 }
 
-@media (orientation: landscape) {
-    .card {
-        width: 90vw;
+
+#moon {
+    offset-path: circle(400px at 0 0);
+    offset-rotate: 0deg;
+    animation: moon-rise 10s infinite linear;
+}
+
+#tree1 {
+    transform: scale(120%, 150%) translate(-20px, -200px);
+}
+
+#mountain2 {
+    transform: scale(1, 1.5) translate(-20px, -200px);
+}
+
+#cloud1 {
+    animation: cloud-move 16s infinite linear;
+}
+
+#cloud2 {
+    animation: reverse cloud-move 14s infinite linear;
+}
+
+@keyframes moon-rise {
+    0% {
+        offset-distance: 50%;
+        fill: #fcbf5e;
+        filter: drop-shadow(0 0 100px #fcc266);
+    }
+
+    30% {
+        fill: #ffec60;
+        filter: drop-shadow(0 0 100px #fff);
+    }
+
+    80% {
+        fill: #fb9f42;
+        filter: drop-shadow(0 0 60px #f9a653)
+    }
+
+    90% {
+        offset-distance: 120%;
+        fill: #c0380f;
+        filter: drop-shadow(0 0 60px #ff6e41);
+    }
+
+    100% {
+        offset-distance: 140%;
     }
 }
 
+@keyframes cloud-move {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@media (orientation: landscape) {}
+
 @media (orientation: portrait) {
     .card {
-        width: 100vw;
+
         height: 100vh;
     }
 }
