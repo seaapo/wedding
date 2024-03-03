@@ -53,6 +53,7 @@ body {
     padding: 0.1rem 0.25rem;
     border-radius: 0.5rem 0.5rem 0 0;
     line-height: 1.2;
+    text-align: center;
 }
 
 .main .anchors .anchor:hover {
@@ -68,6 +69,7 @@ body {
 
 .main .hint {
     text-align: center;
+    margin-bottom: 1.2rem;
 }
 
 .main .hint .congrats {
@@ -77,8 +79,7 @@ body {
 
 .card {
     width: 100vw;
-    height: 70vh;
-    margin: 1.2rem auto;
+    height: 100vh;
     padding: 2px;
     /* border: 2px solid #cc6414; */
     box-shadow: 0px 0px 10px 2px #fed7b6;
@@ -139,7 +140,7 @@ body {
 #moon {
     offset-path: circle(400px at 0 0);
     offset-rotate: 0deg;
-    animation: moon-rise 10s infinite linear;
+    animation: moon-rise 20s infinite linear;
 }
 
 #tree1 {
@@ -196,11 +197,11 @@ body {
     }
 }
 
-@media (orientation: landscape) {}
-
-@media (orientation: portrait) {
-    .card {
-
-        height: 100vh;
+@media (orientation: landscape) {
+    .svg-container #svg-view {
+        width: 30vw;
+        left: 70%;
     }
 }
+
+@media (orientation: portrait) {}
