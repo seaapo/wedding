@@ -8,6 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="./style.css">
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkTbXIZk57oemZb589RASrL7lh3JF8fOA&callback=console.debug&libraries=maps,marker&v=beta">
+        </script>
     <script type="text/javascript" src="./script.js"></script>
 </head>
 
@@ -417,6 +420,10 @@
                     <div class="address txt-large">
                         <h3 class="txt-bold">新店彭園婚宴會館</h3>
                         <div>新北市新店區北新路三段219號2樓</div>
+                        <gmp-map center="24.985660552978516,121.5400619506836" zoom="14" map-id="DEMO_MAP_ID">
+                            <gmp-advanced-marker position="24.985660552978516,121.5400619506836"
+                                title="My location"></gmp-advanced-marker>
+                        </gmp-map>
                     </div>
                 </div>
             </div>
