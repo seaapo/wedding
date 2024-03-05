@@ -87,7 +87,7 @@ body {
     overflow-y: auto;
     overflow-x: hidden;
     border-radius: 1rem;
-    background: #ffffff45;
+    background: #ffffff66;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
@@ -106,7 +106,7 @@ body {
 
 .card .content {
     text-align: center;
-    padding: 2rem;
+    padding: 1.6rem 0;
     letter-spacing: 2px;
 }
 
@@ -132,15 +132,18 @@ body {
     text-shadow: 0px 0px 30px #f68223;
 }
 
-.card .content .address {
-    margin-top: 1.5rem;
+#g-map {
+    width: 80vw;
+    height: 50vh;
+    margin: 1rem auto;
+    border: 2px solid #f6bb6b;
+    box-shadow: 0 0 15px 1px #e7b66855;
+    padding: 0.4rem;
 }
 
-gmp-map {
-    height: 40vh;
-    /* The height is 400 pixels */
-    width: 100%;
-    /* The width is the width of the web page */
+.card .address {
+    font-size: 1.1rem;
+    margin: 0.8rem 0;
 }
 
 
