@@ -133,12 +133,14 @@ body {
 }
 
 #g-map {
-    width: 80vw;
+    width: calc(100vw - 0.8rem);
     height: 50vh;
     margin: 1rem auto;
     border: 2px solid #f6bb6b;
     box-shadow: 0 0 15px 1px #e7b66855;
     padding: 0.4rem;
+    border-left: none;
+    border-right: none;
 }
 
 .card .address {
@@ -218,8 +220,17 @@ body {
 
 @media (orientation: landscape) {
     .svg-container #svg-view {
-        width: 30vw;
-        left: 70%;
+        width: 50vw;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .card {
+        width: 50vw;
+    }
+
+    #g-map {
+        width: calc(50vw - 0.8rem);
     }
 }
 
