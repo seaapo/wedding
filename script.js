@@ -1,15 +1,18 @@
 let _controls = [
-    { id: 'intro' },
-    { id: 'photo' },
-    { id: 'map' }
+    { id: 'intro', bgColor: '#ffffff66' },
+    { id: 'photo', bgColor: '#ffffffaa' },
+    { id: 'map', bgColor: '#ffffffaa' }
 ];
 
 window.onload = function () {
+    const card = document.getElementById('card');
+
     for (let control of _controls) {
         document.getElementById('anchor-' + control.id).addEventListener('click', function (e) {
             hideAllContent();
             document.getElementById('anchor-' + control.id).classList.add('active');
             document.getElementById('card-' + control.id).classList.remove('d-none');
+            card.style['background-color'] = control.bgColor;
         });
     }
 
