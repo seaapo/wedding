@@ -146,14 +146,12 @@ body {
 }
 
 .card #g-map {
-    width: calc(100vw - 0.8rem);
+    width: calc(100vw - 4rem);
     height: 50vh;
     margin: 1rem auto;
-    border: 2px solid #f6bb6b;
-    box-shadow: 0 0 15px 1px #e7b66855;
+    border: 1rem solid #ffffff;
+    box-shadow: 0px 1px 8px 0px #e7b66855;
     padding: 0.4rem;
-    border-left: none;
-    border-right: none;
 }
 
 .card .address {
@@ -168,7 +166,7 @@ body {
     border-right: 1.5rem solid #fff;
     border-bottom: 3rem solid #fff;
     border-radius: 1rem 1rem 0 0;
-    box-shadow: 0 1px 10px 1px #909090;
+    box-shadow: 0 1px 8px 1px #ffd98588;
     background-image: url(resources/pic1.jpg);
     background-color: #f7f7f7;
     background-repeat: no-repeat;
@@ -184,7 +182,7 @@ body {
     max-width: 100vw;
     overflow-x: auto;
     overflow-y: hidden;
-    padding: 0 1.5rem;
+    padding: 0 0.5rem;
 }
 
 #card-photo #photo-gallery .photo {
