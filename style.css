@@ -276,7 +276,7 @@ body {
     }
 
     .card #g-map {
-        width: calc(50vw - 0.8rem);
+        width: calc(50vw - 4rem);
     }
 }
 
