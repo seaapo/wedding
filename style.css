@@ -134,7 +134,7 @@ body {
 }
 
 .card .content .invite {
-    width: 50vw;
+    width: 50%;
     margin: 1.2rem auto;
     border-top: 2px solid #fff;
     border-bottom: 2px solid #fff;
