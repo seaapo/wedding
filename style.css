@@ -117,7 +117,7 @@ body {
 
 .card .content #card-intro,
 .card .content #card-map {
-    margin: 4rem 0 0 0;
+    margin: 3rem 0 0 0;
 }
 
 .card .content .people {
@@ -164,7 +164,7 @@ body {
 
 #card-photo #photo-placeholder {
     height: 60vh;
-    margin: 4rem 1.2rem 1rem 1.2rem;
+    margin: 3rem 1.2rem 1rem 1.2rem;
     /* border-top: 1rem solid #fff; */
     /* border-left: 1.5rem solid #fff; */
     /* border-right: 1.5rem solid #fff; */
@@ -294,9 +294,21 @@ body {
     background: #b30000;
 }
 
+@media screen and (min-width: 768px) {
+    :root {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    :root {
+        font-size: 24px;
+    }
+}
+
 @media (orientation: landscape) {
     :root {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .svg-container #svg-view {
