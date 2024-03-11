@@ -34,7 +34,7 @@ window.onload = function () {
 
     const imgPlaceHolder = document.getElementById('photo-placeholder');
     if (imgPlaceHolder) {
-        for (let i = 1; i < 6; i++) {
+        for (let i = 2; i <= 7; i++) {
             const img = document.createElement("img");
             img.src = 'resources/pic' + i + '.jpg';
             img.classList.add('photo');
