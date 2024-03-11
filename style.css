@@ -189,7 +189,7 @@ body {
 }
 
 .card .content .people .name {
-    margin: 1.5rem;
+    margin: 1.2rem;
 }
 
 .card .content .invite {
@@ -200,6 +200,12 @@ body {
     padding: 1rem 0;
     color: #b75709;
     text-shadow: 0px 0px 30px #f68223;
+}
+
+#card-intro .location {
+    margin-top: 1rem;
+    color: #840505;
+    font-weight: bold;
 }
 
 .card .map-location {
@@ -231,7 +237,7 @@ body {
     /* border-bottom: 3rem solid #fff; */
     /* border-radius: 1rem 1rem 0 0; */
     box-shadow: 0px 2px 3px 0px #e7b668;
-    background-image: url(resources/pic2.jpg);
+    background-image: url(resources/pic1.jpg);
     background-color: #fff;
     background-repeat: no-repeat;
     background-size: contain;
