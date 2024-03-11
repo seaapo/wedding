@@ -1,5 +1,5 @@
 :root {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 body {
@@ -10,6 +10,7 @@ body {
     padding: 0;
     background: radial-gradient(circle farthest-corner at 0 90%, #fedcb6, #fffaf4);
     letter-spacing: 1px;
+    font-family: Verdana, sans-serif;
 }
 
 .d-none {
@@ -25,7 +26,7 @@ body {
 }
 
 .txt-large {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
 }
 
 .txt-normal {
@@ -40,19 +41,75 @@ body {
     margin-top: 0.5rem;
 }
 
+.txt-center {
+    text-align: center;
+}
+
+#btn-enter {
+    position: relative;
+    display: inline-block;
+    border-radius: 0.5rem;
+    z-index: 2;
+    text-align: center;
+    padding: 0.5rem 1.5rem;
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    box-shadow: 1px 1px 2px 0px #d32d0444;
+}
+
+#btn-enter:hover {
+    cursor: pointer;
+    background: #ffedd3;
+    box-shadow: 1px 1px 2px 0px #fcaa39;
+}
+
+#btn-enter:active {
+    background-color: none;
+    box-shadow: inset 1px 1px 2px 0px #d32d0444;
+}
+
+#pg-welcome .card {
+    color: #830707;
+}
+
+#pg-welcome #wedding-img,
+#wedding-doll {
+    width: 100vw;
+    position: fixed;
+    bottom: 4rem;
+    left: 0;
+    opacity: 0.6;
+}
+
+#wedding-doll {
+    width: 40vw;
+    left: initial;
+    right: 0;
+    opacity: 1;
+}
+
+#wedding-doll-in-photo {
+    position: absolute;
+    width: 25vw;
+    bottom: 0;
+    right: 0;
+    opacity: 1;
+    transform: translateY(20%);
+}
+
 .svg-container #svg-view {
     bottom: 0;
     z-index: 1;
 }
 
-.main .anchors {
+.anchors {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     margin: 1.2rem 0.5rem;
 }
 
-.main .anchors .anchor {
+.anchors .anchor {
     margin: 0 0.25rem;
     padding: 0.25rem 0.5rem;
     border-radius: 0.5rem;
@@ -63,12 +120,12 @@ body {
     color: #a1481c;
 }
 
-.main .anchors .anchor:hover {
+.anchors .anchor:hover {
     cursor: pointer;
     background-color: #88564222;
 }
 
-.main .anchors .anchor.active {
+.anchors .anchor.active {
     box-shadow: 0 2px 10px 5px #fbfbf2;
     background: #dc6d1b99;
     color: #fff;
@@ -89,6 +146,7 @@ body {
     height: 100vh;
     /* border: 2px solid #cc6414; */
     box-shadow: 0px 0px 10px 2px #fed7b6;
+    text-align: center;
     z-index: 2;
     overflow-y: auto;
     overflow-x: hidden;
@@ -127,6 +185,7 @@ body {
 
 .card .content .people .title {
     margin-bottom: 1rem;
+    color: #a64617;
 }
 
 .card .content .people .name {
@@ -139,6 +198,7 @@ body {
     border-top: 2px solid #fff;
     border-bottom: 2px solid #fff;
     padding: 1rem 0;
+    color: #b75709;
     text-shadow: 0px 0px 30px #f68223;
 }
 
@@ -177,6 +237,7 @@ body {
     background-size: contain;
     background-position: center;
     transition: background-image 1s ease-in;
+    position: relative;
 }
 
 #card-photo #photo-gallery {
@@ -197,6 +258,10 @@ body {
     box-shadow: 1px 1px 4px 0px #4d4c4c;
     object-fit: cover;
     border-radius: 1rem 0 1rem 0;
+}
+
+#card-photo #photo-gallery .photo:hover {
+    cursor: pointer;
 }
 
 #card-photo #photo-gallery .photo:first-child {
@@ -296,19 +361,31 @@ body {
 
 @media screen and (min-width: 768px) {
     :root {
-        font-size: 18px;
+        font-size: 20px;
     }
 }
 
 @media screen and (min-width: 1024px) {
     :root {
-        font-size: 22px;
+        font-size: 24px;
     }
 }
 
 @media (orientation: landscape) {
     :root {
-        font-size: 18px;
+        font-size: 16px;
+    }
+
+    #pg-welcome #wedding-img {
+        width: 40vw;
+    }
+
+    #wedding-doll {
+        width: 20vw;
+    }
+
+    #wedding-doll-in-photo {
+        width: 10vw;
     }
 
     .svg-container #svg-view {

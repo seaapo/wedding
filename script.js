@@ -1,11 +1,23 @@
 let _controls = [
-    { id: 'intro', bgColor: '#ffffff66' },
-    { id: 'photo', bgColor: '#ffffffaa' },
-    { id: 'map', bgColor: '#ffffffaa' }
+    { id: 'intro', bgColor: '#ffffff66', dollInCard: true, dollInPhoto: false },
+    { id: 'photo', bgColor: '#ffffffaa', dollInCard: false, dollInPhoto: true },
+    { id: 'map', bgColor: '#ffffffaa', dollInCard: false, dollInPhoto: false }
 ];
 
 window.onload = function () {
-    const card = document.getElementById('card');
+    // welcome page
+    const pgWelcome = document.getElementById('pg-welcome');
+    const pgMain = document.getElementById('pg-content');
+    const btnEnterContent = document.getElementById('btn-enter');
+    btnEnterContent.addEventListener('click', function(e) {
+        pgMain.classList.remove('d-none');
+        pgWelcome.classList.add('d-none');
+    });
+
+    // main content tabs
+    const dollInCard = document.getElementById('wedding-doll');
+    const dollInPhoto = document.getElementById('wedding-doll-in-photo');
+    const card = document.getElementById('pg-content-card');
 
     for (let control of _controls) {
         document.getElementById('anchor-' + control.id).addEventListener('click', function (e) {
@@ -13,6 +25,10 @@ window.onload = function () {
             document.getElementById('anchor-' + control.id).classList.add('active');
             document.getElementById('card-' + control.id).classList.remove('d-none');
             card.style['background-color'] = control.bgColor;
+            control.dollInCard ? dollInCard.classList.remove('d-none') : dollInCard.classList.add('d-none');
+            control.dollInPhoto ? dollInPhoto.classList.remove('d-none') : dollInPhoto.classList.add('d-none');
+                
+            
         });
     }
 
