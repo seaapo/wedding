@@ -76,15 +76,20 @@ body {
 #wedding-doll {
     width: 100vw;
     position: fixed;
-    bottom: 4rem;
+    bottom: 1rem;
     left: 0;
     opacity: 0.6;
 }
 
+#pg-welcome #wedding-img {
+    bottom: 4rem;
+}
+
 #wedding-doll {
-    width: 40vw;
+    width: 35vw;
     left: initial;
-    right: 0;
+    right: 50%;
+    transform: translateX(15%);
     opacity: 0.8;
 }
 
@@ -379,7 +384,7 @@ body {
 
 @media (orientation: landscape) {
     :root {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     #pg-welcome #wedding-img {
@@ -388,6 +393,7 @@ body {
 
     #wedding-doll {
         width: 20vw;
+        bottom: 0.8rem;
     }
 
     #wedding-doll-in-photo {
