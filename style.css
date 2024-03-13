@@ -182,7 +182,7 @@ body {
     overflow-y: hidden;
     overflow-x: hidden;
     border-radius: 0.5rem;
-    background: #ffffff44;
+    background: #ffffff66;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
@@ -767,7 +767,7 @@ body {
     }
 
     #pg-welcome #wedding-img {
-        width: 40vw;
+        width: 30vw;
         left: 50%;
         transform: translateX(-58%);
     }
@@ -778,7 +778,7 @@ body {
     }
 
     #pg-welcome #txt-welcome {
-        width: 35vw;
+        width: 32vw;
     }
 
     #wedding-doll-in-photo {
@@ -804,7 +804,7 @@ body {
     }
 
     .card .content {
-        margin-top: 4rem;
+        margin-top: 2rem;
     }
 
     .card #g-map {
