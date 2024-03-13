@@ -59,7 +59,6 @@ body {
 
 #btn-enter:hover {
     cursor: pointer;
-    background: #ffedd3;
     box-shadow: 1px 1px 2px 0px #fcaa39;
 }
 
@@ -69,7 +68,7 @@ body {
 }
 
 #pg-welcome #txt-welcome {
-    width: 80vw;
+    width: 75vw;
     position: absolute;
     top: 40px;
     left: 50%;
@@ -107,7 +106,7 @@ body {
 }
 
 #pg-welcome #wedding-img {
-    bottom: 1.6rem;
+    bottom: -1rem;
 }
 
 #wedding-doll {
@@ -769,6 +768,8 @@ body {
 
     #pg-welcome #wedding-img {
         width: 40vw;
+        left: 50%;
+        transform: translateX(-58%);
     }
 
     #wedding-doll {
