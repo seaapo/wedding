@@ -814,13 +814,13 @@ body {
 
 @media screen and (min-width: 768px) and (orientation: landscape) {
     :root {
-        font-size: 17px;
+        font-size: 14px;
     }
 }
 
 @media screen and (min-width: 1024px) and (orientation: landscape) {
     :root {
-        font-size: 19px;
+        font-size: 14px;
     }
 }
 
