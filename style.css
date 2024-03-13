@@ -1,5 +1,5 @@
 :root {
-    font-size: 14px;
+    font-size: 13px;
 }
 
 body {
@@ -741,21 +741,9 @@ body {
     }
 }
 
-@media screen and (min-width: 768px) {
-    :root {
-        font-size: 20px;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    :root {
-        font-size: 24px;
-    }
-}
-
 @media (orientation: landscape) {
     :root {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     #pg-welcome #wedding-doll-b {
@@ -821,6 +809,18 @@ body {
 
     #card-photo #photo-gallery {
         margin: 1rem 2rem 0 2rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (orientation: landscape) {
+    :root {
+        font-size: 17px;
+    }
+}
+
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+    :root {
+        font-size: 19px;
     }
 }
 
