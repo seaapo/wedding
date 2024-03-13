@@ -4,15 +4,21 @@ let _controls = [
     { id: 'map', bgColor: '#ffffffaa', dollInCard: false, dollInPhoto: false }
 ];
 
+let btnEnter;
+
 window.onload = function () {
     // welcome page
     const pgWelcome = document.getElementById('pg-welcome');
     const pgMain = document.getElementById('pg-content');
-    const btnEnterContent = document.getElementById('btn-enter');
-    btnEnterContent.addEventListener('click', function(e) {
+    btnEnter = document.getElementById('btn-enter');
+    btnEnter.addEventListener('click', function (e) {
         pgMain.classList.remove('d-none');
         pgWelcome.classList.add('d-none');
     });
+
+    // door
+    var door = document.querySelector(".door");
+    door.addEventListener("click", openDoor);
 
     // main content tabs
     const dollInCard = document.getElementById('wedding-doll');
@@ -27,8 +33,8 @@ window.onload = function () {
             card.style['background-color'] = control.bgColor;
             control.dollInCard ? dollInCard.classList.remove('d-none') : dollInCard.classList.add('d-none');
             control.dollInPhoto ? dollInPhoto.classList.remove('d-none') : dollInPhoto.classList.add('d-none');
-                
-            
+
+
         });
     }
 
@@ -45,6 +51,24 @@ window.onload = function () {
             });
         }
     }
+}
+
+function openDoor() {
+    const dollInDoor = document.getElementById('wedding-doll-g');
+    const heart = document.getElementById('hint-heart');
+    const hintDot = document.getElementById('hint-dot');
+
+    this.classList.toggle("door-open");
+    dollInDoor.classList.toggle('shake');
+    heart.classList.toggle('d-none');
+    hintDot.classList.toggle('d-none');
+
+    this.removeEventListener('click', openDoor);
+
+    setTimeout(function () {
+        console.log('-----------');
+        btnEnter.click();
+    }, 3000);
 }
 
 function hideAllContent() {

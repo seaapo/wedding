@@ -47,7 +47,7 @@ body {
 
 #btn-enter {
     position: relative;
-    display: inline-block;
+    display: none;
     border-radius: 0.5rem;
     z-index: 2;
     text-align: center;
@@ -72,7 +72,7 @@ body {
     position: absolute;
     top: 40px;
     left: 50%;
-    transform: translate(-50%, -40%);
+    transform: translate(-50%, -45%);
 }
 
 #pg-welcome .txt-welcome-sub {
@@ -80,25 +80,17 @@ body {
     top: calc(40px + 5rem);
 }
 
+#pg-welcome .txt-welcome-sub h3 {
+    padding: 0 1rem;
+}
+
 #pg-welcome .card {
     color: #830707;
 }
 
-#pg-welcome #wedding-doll-b,
-#pg-welcome #wedding-doll-g {
-    height: 50px;
-    position: absolute;
-    left: 12vw;
-}
-
-#pg-welcome #wedding-doll-g {
-    left: initial;
-    right: 10vw;
-}
-
 #pg-welcome #wedding-img,
 #wedding-doll {
-    width: 100vw;
+    width: 90vw;
     position: fixed;
     bottom: 1rem;
     left: 0;
@@ -107,6 +99,98 @@ body {
 
 #pg-welcome #wedding-img {
     bottom: -1rem;
+}
+
+.door-back {
+    background: #4b2424;
+    position: relative;
+    width: 6.5rem;
+    height: 8rem;
+    margin: 0 auto;
+    margin-top: 2.8rem;
+}
+
+.door {
+    background: radial-gradient(circle farthest-corner at 0 90%, #7e1010, #bf2929);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 6.5rem;
+    height: 8rem;
+    border: 2px solid #deb331;
+    box-shadow: inset 0 0 5px 1px #866608;
+    transform-origin: left;
+    /*Speed of the Door animation*/
+    transition: all 0.5s ease-in-out;
+}
+
+.door-front {
+    font-size: 2.4rem;
+    color: #ffe000;
+    margin-top: 0.5rem;
+}
+
+.door-front:hover {
+    cursor: pointer;
+}
+
+.door-open {
+    /*prespectiv creates the door open effect*/
+    transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(-3px) rotateY(-105deg);
+}
+
+.door-hint {
+    position: absolute;
+    left: 95%;
+    bottom: 0;
+}
+
+.door-hint .hint {
+    border: 1px solid #9c3f3f;
+    border-radius: 60% 35%;
+    color: #e92626;
+    padding: 0.5rem 1rem;
+    position: relative;
+    width: 4rem;
+    left: 2rem;
+    top: -1rem;
+    transform: rotate(12deg);
+}
+
+.door-hint .circle {
+    border: 1px solid #9c3f3f;
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 0.25rem;
+    position: relative;
+}
+
+.door-hint .circle.circle1 {
+    left: 3rem;
+    top: -0.75rem;
+    width: 0.6rem;
+    height: 0.3rem;
+}
+
+.door-hint .circle.circle2 {
+    left: 2.8rem;
+    top: -0.5rem;
+}
+
+#pg-welcome #wedding-doll-b,
+#pg-welcome #wedding-doll-g {
+    height: 4rem;
+}
+
+#pg-welcome #wedding-doll-g {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+
+#pg-welcome #wedding-doll-g.shake {
+    animation: doll-shake 2.5s 0.15s linear infinite;
 }
 
 #wedding-doll {
@@ -473,7 +557,7 @@ body {
 
 .snowing .small:nth-child(11) {
     left: 20px;
-    -webkit-animation-delay:8.5s, 0.3s;
+    -webkit-animation-delay: 8.5s, 0.3s;
     animation-delay: 8.5s, 0.3s;
 }
 
@@ -741,6 +825,36 @@ body {
     }
 }
 
+@keyframes doll-shake {
+    10% {
+        transform: rotate(15deg);
+    }
+    20% {
+        transform: rotate(-10deg);
+    }
+    30% {
+        transform: rotate(5deg);
+    }
+    40% {
+        transform: rotate(-5deg);
+    }
+    50%, 100% {
+        transform: rotate(0deg);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    :root {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    :root {
+        font-size: 20px;
+    }
+}
+
 @media (orientation: landscape) {
     :root {
         font-size: 14px;
@@ -809,18 +923,6 @@ body {
 
     #card-photo #photo-gallery {
         margin: 1rem 2rem 0 2rem;
-    }
-}
-
-@media screen and (min-width: 768px) and (orientation: landscape) {
-    :root {
-        font-size: 14px;
-    }
-}
-
-@media screen and (min-width: 1024px) and (orientation: landscape) {
-    :root {
-        font-size: 14px;
     }
 }
 
