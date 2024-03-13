@@ -68,6 +68,19 @@ body {
     box-shadow: inset 1px 1px 2px 0px #d32d0444;
 }
 
+#pg-welcome #txt-welcome {
+    width: 80vw;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+
+#pg-welcome .txt-welcome-sub {
+    position: relative;
+    top: calc(40px + 5rem);
+}
+
 #pg-welcome .card {
     color: #830707;
 }
@@ -76,12 +89,12 @@ body {
 #pg-welcome #wedding-doll-g {
     height: 50px;
     position: absolute;
-    left: 15vw;
+    left: 12vw;
 }
 
 #pg-welcome #wedding-doll-g {
     left: initial;
-    right: 15vw;
+    right: 10vw;
 }
 
 #pg-welcome #wedding-img,
@@ -94,7 +107,7 @@ body {
 }
 
 #pg-welcome #wedding-img {
-    bottom: 1rem;
+    bottom: 1.6rem;
 }
 
 #wedding-doll {
@@ -195,6 +208,7 @@ body {
 .card .content #card-intro,
 .card .content #card-map {
     margin: 2rem 0 0 0;
+    position: relative;
 }
 
 .card .content .people {
@@ -762,6 +776,10 @@ body {
         bottom: 0.8rem;
     }
 
+    #pg-welcome #txt-welcome {
+        width: 35vw;
+    }
+
     #wedding-doll-in-photo {
         width: 10vw;
     }
@@ -782,6 +800,10 @@ body {
 
     .card {
         width: 50vw;
+    }
+
+    .card .content {
+        margin-top: 4rem;
     }
 
     .card #g-map {
