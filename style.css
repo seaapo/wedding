@@ -200,7 +200,7 @@ body {
 }
 
 #pg-welcome #wedding-doll-g.shake {
-    animation: doll-shake 2.5s 0.15s linear infinite;
+    animation: doll-shake 3s 0.15s linear 1;
 }
 
 #wedding-doll {
