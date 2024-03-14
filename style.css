@@ -90,7 +90,7 @@ body {
 
 #pg-welcome #wedding-img,
 #wedding-doll {
-    width: 90vw;
+    width: 85vw;
     position: fixed;
     bottom: 1rem;
     left: 0;
@@ -885,8 +885,9 @@ body {
     }
 
     #wedding-doll {
-        width: 20vw;
-        bottom: 0.8rem;
+        width: 15vw;
+        bottom: 2.2rem;
+        transform: translateX(10%);
     }
 
     #pg-welcome #txt-welcome {
