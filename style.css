@@ -102,30 +102,57 @@ body {
 }
 
 .door-back {
-    background: #4b2424;
+    background: #572d2d;
     position: relative;
     width: 6.5rem;
     height: 8rem;
     margin: 0 auto;
     margin-top: 2.8rem;
+    border: 0.8rem solid #883c3c;
 }
 
 .door-back .door-in-light {
-    width: 0.8rem;
-    height: 0.8rem;
-    border-radius: 0.2rem;
-    background: #ccccccbb;
-    box-shadow: 0 0 40px 10px #c6c6c688;
+    width: 2.8rem;
+    height: 3rem;
+    border-radius: 0.3rem;
+    background: #644040;
+    box-shadow: 0 0 50px 20px #694e4e88;
     margin: 0 auto;
-    top: 50%;
+    top: 35%;
     position: relative;
+}
+
+.door-back .door-in-light::before {
+    position: absolute;
+    content: '';
+    width: 1.6rem;
+    height: 2rem;
+    background: #716262bb;
+    box-shadow: 0 0 5px 2px #816868;
+    left: 50%;
+    top: 50%;
+    border-radius: 0.2rem;
+    transform: translate(-50%, -40%);
+}
+
+.door-back .door-in-light::after {
+    position: absolute;
+    content: '';
+    width: 0.6rem;
+    height: 0.8rem;
+    background: #ececec;
+    box-shadow: 0 0 6px 4px #d8d6d6;
+    left: 50%;
+    top: 50%;
+    border-radius: 0.1rem;
+    transform: translate(-50%, 0%);
 }
 
 .door-back .door {
     background: radial-gradient(circle farthest-corner at 0 90%, #7e1010, #bf2929);
     position: absolute;
     top: 0px;
-    left: 0px;
+    left: -1px;
     width: 6.5rem;
     height: 8rem;
     border: 2px solid #deb331;
