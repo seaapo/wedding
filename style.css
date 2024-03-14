@@ -315,7 +315,7 @@ body {
     overflow-y: hidden;
     overflow-x: hidden;
     border-radius: 0.5rem;
-    background: #ffffff66;
+    background: #ffffff44;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
@@ -953,6 +953,7 @@ body {
 
     .card {
         width: 50vw;
+		background: #ffffff88;
     }
 
     .card .content {
