@@ -70,14 +70,14 @@ body {
 #pg-welcome #txt-welcome {
     width: 70vw;
     position: absolute;
-    top: 40px;
+    top: calc(40px + 3.2rem);
     left: 50%;
-    transform: translate(-50%, -45%);
+    transform: translate(-50%, -50%);
 }
 
 #pg-welcome .txt-welcome-sub {
     position: relative;
-    top: calc(40px + 5rem);
+    top: calc(40px + 5.5rem);
 }
 
 #pg-welcome .txt-welcome-sub h3 {
@@ -91,7 +91,7 @@ body {
 #pg-welcome #wedding-img,
 #wedding-doll {
     width: 85vw;
-    position: fixed;
+    position: absolute;
     bottom: 1rem;
     left: 0;
     opacity: 0.8;
@@ -99,7 +99,6 @@ body {
 
 #pg-welcome #wedding-img {
     bottom: -1rem;
-    animation: portrait-img-move 2s 0.15s ease-in 1;
 }
 
 .door-back {
@@ -890,18 +889,6 @@ body {
     }
     50%, 100% {
         transform: rotate(0deg);
-    }
-}
-
-@keyframes portrait-img-move {
-    0% {
-        opacity: 0.2;
-        bottom: -50%;
-    }
-
-    100% {
-        opacity: 1;
-        bottom: -1rem;
     }
 }
 
