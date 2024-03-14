@@ -68,7 +68,7 @@ body {
 }
 
 #pg-welcome #txt-welcome {
-    width: 75vw;
+    width: 70vw;
     position: absolute;
     top: 40px;
     left: 50%;
@@ -99,6 +99,7 @@ body {
 
 #pg-welcome #wedding-img {
     bottom: -1rem;
+    animation: portrait-img-move 2s 0.15s ease-in 1;
 }
 
 .door-back {
@@ -889,6 +890,18 @@ body {
     }
     50%, 100% {
         transform: rotate(0deg);
+    }
+}
+
+@keyframes portrait-img-move {
+    0% {
+        opacity: 0.2;
+        bottom: -50%;
+    }
+
+    100% {
+        opacity: 1;
+        bottom: -1rem;
     }
 }
 
