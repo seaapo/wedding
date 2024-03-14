@@ -17,7 +17,7 @@ window.onload = function () {
     });
 
     // door
-    var door = document.querySelector(".door");
+    var door = document.getElementById("door");
     door.addEventListener("click", openDoor);
 
     // main content tabs
@@ -54,6 +54,7 @@ window.onload = function () {
 }
 
 function openDoor() {
+    console.log('----- open dorr');
     const dollInDoor = document.getElementById('wedding-doll-g');
     const heart = document.getElementById('hint-heart');
     const hintDot = document.getElementById('hint-dot');
@@ -66,7 +67,6 @@ function openDoor() {
     this.removeEventListener('click', openDoor);
 
     setTimeout(function () {
-        console.log('-----------');
         btnEnter.click();
     }, 3000);
 }

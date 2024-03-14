@@ -110,7 +110,18 @@ body {
     margin-top: 2.8rem;
 }
 
-.door {
+.door-back .door-in-light {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 0.2rem;
+    background: #ccccccbb;
+    box-shadow: 0 0 40px 10px #c6c6c688;
+    margin: 0 auto;
+    top: 50%;
+    position: relative;
+}
+
+.door-back .door {
     background: radial-gradient(circle farthest-corner at 0 90%, #7e1010, #bf2929);
     position: absolute;
     top: 0px;
@@ -124,7 +135,12 @@ body {
     transition: all 0.5s ease-in-out;
 }
 
-.door .latch {
+.door-back .door:hover {
+    cursor: pointer;
+}
+
+
+.door-back .door .latch {
     width: 0.8rem;
     height: 0.8rem;
     border-radius: 0.8rem;
@@ -134,14 +150,10 @@ body {
     box-shadow: 0 0 2px 1px #5e2408;
 }
 
-.door-front {
+.door-back .door .door-front {
     font-size: 2.4rem;
     color: #ffe000;
     margin-top: 0.5rem;
-}
-
-.door-front:hover {
-    cursor: pointer;
 }
 
 .door-open {
