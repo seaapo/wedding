@@ -259,6 +259,32 @@ body {
     transform: translateY(20%);
 }
 
+#ig-filter {
+    position: absolute;
+    border: 1px solid #763da2;
+    border-radius: 70% / 55%;
+    padding: 1rem;
+    bottom: 9rem;
+    left: 45%;
+    background: #fae6ff;
+    box-shadow: 0 1px 1px 0px;
+}
+
+#ig-filter > a {
+    text-decoration: none;
+}
+
+#ig-filter::after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 0.5rem;
+    background: #3b1b53;
+    left: 50%;
+    transform: translateX(-50%) rotate(0deg);
+    top: 101%;
+}
+
 .svg-container #svg-view {
     bottom: 0;
     z-index: 1;
@@ -941,6 +967,10 @@ body {
         width: 50vw;
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    #ig-filter {
+        display: none;
     }
 
     .main .anchors {
