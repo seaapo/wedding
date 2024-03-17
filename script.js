@@ -1,7 +1,7 @@
 let _controls = [
-    { id: 'intro', bgColor: '#ffffff66', dollInCard: true, dollInPhoto: false },
-    { id: 'photo', bgColor: '#ffffffaa', dollInCard: false, dollInPhoto: true },
-    { id: 'map', bgColor: '#ffffffaa', dollInCard: false, dollInPhoto: false }
+    { id: 'intro', bgColor: '#ffffff66', dollInCard: true, dollInPhoto: false, showIgLinkArea: true },
+    { id: 'photo', bgColor: '#ffffffaa', dollInCard: false, dollInPhoto: true, showIgLinkArea: false },
+    { id: 'map', bgColor: '#ffffffaa', dollInCard: false, dollInPhoto: false, showIgLinkArea: false }
 ];
 
 let btnEnter;
@@ -41,7 +41,15 @@ window.onload = function () {
             control.dollInCard ? dollInCard.classList.remove('d-none') : dollInCard.classList.add('d-none');
             control.dollInPhoto ? dollInPhoto.classList.remove('d-none') : dollInPhoto.classList.add('d-none');
 
-
+            if (control.showIgLinkArea) {
+                // landscape or portrait
+                if (window.matchMedia("(orientation: portrait)").matches) {
+                    igFilterClickArea.classList.remove('d-none');
+                }
+            }
+            else {
+                igFilterClickArea.classList.add('d-none');
+            }
         });
     }
 
@@ -61,7 +69,7 @@ window.onload = function () {
 }
 
 function openDoor() {
-    console.log('----- open dorr');
+    console.log('open door');
     const dollInDoor = document.getElementById('wedding-doll-g');
     const heart = document.getElementById('hint-heart');
     const hintDot = document.getElementById('hint-dot');
