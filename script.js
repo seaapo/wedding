@@ -16,6 +16,13 @@ window.onload = function () {
         pgWelcome.classList.add('d-none');
     });
 
+    // ig filter
+    const igFilterClickArea = document.getElementById('ig-filter-click-area');
+    const igFilterLink = document.getElementById('ig-filter-link');
+    igFilterClickArea.addEventListener('click', function(e) {
+        igFilterLink.click();
+    });
+
     // door
     var door = document.getElementById("door");
     door.addEventListener("click", openDoor);

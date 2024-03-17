@@ -264,7 +264,7 @@ body {
     border: 1px solid #763da2;
     border-radius: 70% / 55%;
     padding: 1rem;
-    bottom: 9rem;
+    bottom: 8.5rem;
     left: 45%;
     background: #fae6ff;
     box-shadow: 0 1px 1px 0px;
@@ -283,6 +283,19 @@ body {
     left: 50%;
     transform: translateX(-50%) rotate(0deg);
     top: 101%;
+}
+
+#ig-filter-click-area {
+    position: absolute;
+    bottom: 8.1rem;
+    left: 40%;
+    width: 8rem;
+    height: 4rem;
+    z-index: 2;
+}
+
+#ig-filter-click-area:hover {
+    cursor: pointer;
 }
 
 .svg-container #svg-view {
@@ -969,9 +982,12 @@ body {
         transform: translateX(-50%);
     }
 
-    #ig-filter {
+    #ig-filter,
+    #ig-filter-click-area  {
         display: none;
     }
+
+    #ig-filter-click-area 
 
     .main .anchors {
         margin: 1.2rem 0;
