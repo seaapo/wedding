@@ -490,10 +490,10 @@ body {
 }
 
 #card-photo #photo-gallery .photo {
-    height: calc(14vh - 0.5rem - 20px);
-    margin: 0.2rem;
-    min-width: 10.5vh;
-    max-width: 10.5vh;
+    height: calc(12vh - 0.5rem - 20px);
+    margin: 0.3rem;
+    min-width: 8.5vh;
+    max-width: 8.5vh;
     border: 5px solid #f4f4f4;
     box-shadow: 1px 1px 4px 0px #4d4c4c;
     object-fit: cover;
