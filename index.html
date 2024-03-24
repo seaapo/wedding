@@ -514,11 +514,29 @@
                                 <div class="mt-1">捷運<strong>大坪林站4號</strong>出口 3分鐘</div>
                             </div>
                         </div>
-                        <gmp-map id="g-map" center="24.985660552978516,121.5400619506836" zoom="14"
-                            map-id="DEMO_MAP_ID">
-                            <gmp-advanced-marker position="24.985660552978516,121.5400619506836" title="My location">
-                            </gmp-advanced-marker>
-                        </gmp-map>
+                        <div class="map">
+                            <div class="map-content">
+                                <div id="map-img1" class="img">
+                                    <img src="./resources/map1.jpg">
+                                </div>
+                                <div id="map-img2" class="img d-none">
+                                    <img src="./resources/map2.jpg">
+                                </div>
+                                <div id="map-img3" class="img d-none">
+                                    <gmp-map id="g-map" center="24.985660552978516,121.5400619506836" zoom="14"
+                                        map-id="DEMO_MAP_ID">
+                                        <gmp-advanced-marker position="24.985660552978516,121.5400619506836"
+                                            title="My location">
+                                        </gmp-advanced-marker>
+                                    </gmp-map>
+                                </div>
+                            </div>
+                            <div class="map-controller">
+                                <div id="link-map-img1" class="round active"></div>
+                                <div id="link-map-img2" class="round"></div>
+                                <div id="link-map-img3" class="round"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

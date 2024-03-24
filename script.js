@@ -51,6 +51,40 @@ window.onload = function () {
                 igFilterClickArea.classList.add('d-none');
             }
         });
+
+        // map
+        const mapDatas = [{
+            linkId: 'link-map-img1', targetId: 'map-img1'
+        }, {
+            linkId: 'link-map-img2', targetId: 'map-img2'
+        }, {
+            linkId: 'link-map-img3', targetId: 'map-img3'
+        }];
+
+        for (let map of mapDatas) {
+            const linkMap = document.getElementById(map.linkId);
+            const targetMap = document.getElementById(map.targetId);
+            if (linkMap && targetMap) {
+                linkMap.addEventListener('click', function(e) {
+
+                    for (let m of mapDatas) {
+                        if (m.targetId !== map.targetId) {
+                            const otherLink = document.getElementById(m.linkId);
+                            const otherMap = document.getElementById(m.targetId);
+                            if (otherMap) {
+                                otherMap.classList.add('d-none');
+                            }
+                            if (otherLink) {
+                                otherLink.classList.remove('active');
+                            }
+                        }
+                    }
+
+                    linkMap.classList.add('active');
+                    targetMap.classList.remove('d-none');
+                });
+            }
+        }
     }
 
     const imgPlaceHolder = document.getElementById('photo-placeholder');
