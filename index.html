@@ -18,8 +18,8 @@
 </head>
 
 <body>
-    <!-- edit by sean -->
-    <div id="pg-welcome">
+    <!-- welcome -->
+    <div id="pg-welcome" class="d-none">
         <div class="anchors">
             <div class="anchor txt-large active">Sean & Apo</div>
         </div>
@@ -100,7 +100,8 @@
         </div>
         <img id="wedding-img" src="resources/a1.png">
     </div>
-    <div id="pg-content" class="d-none">
+    <!-- main -->
+    <div id="pg-content">
         <div class="svg-container">
             <svg id="svg-view" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
                 style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
@@ -451,13 +452,16 @@
         <div class="main">
             <div class="anchors">
                 <!--<div id="anchor-ig" class="anchor txt-large">IG濾鏡</div>-->
-                <div id="anchor-photo" class="anchor txt-large">搶先看</div>
+                <div id="anchor-photo" class="anchor txt-large">婚紗照</div>
                 <div id="anchor-intro" class="anchor txt-large active">Sean & Apo</div>
                 <div id="anchor-map" class="anchor txt-large">交通</div>
+                <div id="anchor-seat" class="anchor txt-large">座位表</div>
+                <div id="anchor-help" class="anchor txt-large">神隊友</div>
+                <div id="anchor-ig" class="anchor txt-large">IG濾鏡</div>
             </div>
             <div id="pg-content-card" class="card">
                 <div class="content">
-                    <div id="card-intro">
+                    <div id="card-intro" class="card-content">
                         <div class="people">
                             <div class="intro groom">
                                 <div class="title">THE GROOM</div>
@@ -493,17 +497,14 @@
                             <div class="location">彭園 新店館</div>
                         </div>
                     </div>
-                    <div id="card-photo" class="d-none">
+                    <div id="card-photo" class="card-content d-none">
                         <div id="photo-placeholder">
                             <img id="wedding-doll-in-photo" src="resources/a3.png">
                         </div>
                         <div id="photo-gallery">
                         </div>
                     </div>
-                    <div id="card-ig" class="d-none">
-
-                    </div>
-                    <div id="card-map" class="d-none">
+                    <div id="card-map" class="card-content d-none">
                         <div>
                             <div class="map-location">彭園 新店館</div>
                             <div class="address">
@@ -535,6 +536,93 @@
                                 <div id="link-map-img1" class="round active"></div>
                                 <div id="link-map-img2" class="round"></div>
                                 <div id="link-map-img3" class="round"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card-seat" class="card-content d-none">
+                        <div class="wrapper">
+                            <img id="wedding-seat" usemap="#seatmap" src="resources/seat.png">
+                            <div class="seats">
+                                <div id="seat0" class="seat">主桌</div>
+                                <div id="seat1" class="seat">1</div>
+                                <div id="seat2" class="seat">2</div>
+                                <div id="seat3" class="seat">3</div>
+                                <div id="seat4" class="seat">4</div>
+                                <div id="seat5" class="seat">5</div>
+                                <div id="seat6" class="seat">6</div>
+                                <div id="seat7" class="seat">7</div>
+                                <div id="seat8" class="seat">8</div>
+                                <div id="seat9" class="seat">9</div>
+                                <div id="seat10" class="seat">10</div>
+                                <div id="seat11" class="seat">11</div>
+                                <div id="seat12" class="seat">12</div>
+                                <div id="seat13" class="seat">13</div>
+                                <div id="seat14" class="seat">14</div>
+                                <div id="seat15" class="seat">15</div>
+                                <div id="seat16" class="seat">16</div>
+                                <div id="seat17" class="seat">17</div>
+                                <div id="seat18" class="seat">18</div>
+                                <div id="seat19" class="seat">19</div>
+                            </div>
+                            <map name="seatmap">
+                                <area shape="rect" coords="34,44,270,350" alt="Computer" href="">
+                                <area shape="rect" coords="290,172,333,250" alt="Phone" href="">
+                                <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="">
+                            </map>
+                        </div>
+                    </div>
+                    <div id="card-ig" class="card-content d-none">
+
+                    </div>
+                    <div id="card-help" class="card-content d-none">
+                        <div class="help-container">
+                            <div class="help-item">
+                                <label>最美婚紗</label>
+                                <div><a href="https://www.instagram.com/imissuuu2018?igsh=bmlycXpmNThjMGZx">念念婚紗</a>
+                                </div>
+                            </div>
+                            <div class="help-item">
+                                <label>婚紗攝影</label>
+                                <div><a href="https://www.instagram.com/bythetime22?igsh=MWVrOXI3NzB0YWV3cg==">時光細雨</a>
+                                </div>
+                            </div>
+                            <div class="help-item">
+                                <label>婚宴攝影</label>
+                                <div><a href="https://www.instagram.com/damaohung?igsh=YWIzbTljcWxjYWlw">大毛</a></div>
+                            </div>
+                            <div class="help-item">
+                                <label>婚宴新秘</label>
+                                <div><a
+                                        href="https://www.instagram.com/missdodo_makeup_studio?igsh=ODJ0dzkxaWdtOGVn">荳荳</a>
+                                </div>
+                            </div>
+                            <div class="help-item">
+                                <label>媽媽造型</label>
+                                <div><a href="https://www.instagram.com/point.makeupteam?igsh=enE3ZTZ0NWRuMmxl">荳荳</a>
+                                </div>
+                            </div>
+                            <div class="help-item">
+                                <label>喜餅</label>
+                                <div><a href="https://www.instagram.com/cookie_no324/">秉醇烘焙坊</a></div>
+                            </div>
+                            <div class="help-item">
+                                <label>似顏繪</label>
+                                <div><a href="https://www.instagram.com/moreyenmore/">more yen more</a></div>
+                            </div>
+                            <div class="help-item">
+                                <label>桌上禮</label>
+                                <div><a href="https://www.instagram.com/birdcoffeetw/">啾啾鳥咖啡</a></div>
+                            </div>
+                            <div class="help-item">
+                                <label>捧花</label>
+                                <div><a href="https://maps.app.goo.gl/m4Nz7Vv1mPYRsdNW7?g_st=ic">果石花房</a></div>
+                            </div>
+                            <div class="help-item">
+                                <label>布置小物</label>
+                                <div>
+                                    <a href="https://www.instagram.com/11.dessert?igsh=MTJscGFicHd6ZTRjaA==">山餅乾</a>
+                                    <a href="https://www.instagram.com/meina0815?igsh=NDNxd29obzNqazFx">造型甜甜圈</a>
+                                </div>
                             </div>
                         </div>
                     </div>

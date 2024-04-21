@@ -376,8 +376,7 @@ body {
     letter-spacing: 2px;
 }
 
-.card .content #card-intro,
-.card .content #card-map {
+.card .content .card-content {
     margin: 2rem 0 0 0;
     position: relative;
 }
@@ -512,6 +511,115 @@ body {
     margin-right: auto;
 }
 
+#card-seat .wrapper {
+    width: 100vw;
+    height: calc(100vh - 100px);
+    overflow: hidden;
+    position: relative;
+}
+
+#card-seat .wrapper img {
+    width: 100%;
+    object-fit: contain;
+}
+
+#card-seat .wrapper .seats {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#card-seat .wrapper .seats > .seat {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 4.5rem;
+    background: #000;
+    color: #fff;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+}
+
+#card-seat .wrapper .seats > .seat#seat0 {
+    top: 10vh;
+    left: 50vw;
+}
+
+#card-seat .wrapper map area {
+    border: 1px solid #000;
+}
+
+#card-help .help-container {
+    max-height: calc(100vh - 150px);
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#card-help .help-item {
+    border-bottom: 1px solid #f09858;
+    padding: 1rem;
+    margin: 0 2rem 0.8rem 0;
+    border-radius: 0 0.5rem 0.5rem 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.25rem;
+    border-left: none;
+    border-right: 1px solid #f09858;
+    background: #fcf6ec;
+}
+
+#card-help .help-item::before {
+    content: '';
+    position: absolute;
+    right: 4px;
+    width: 50%;
+    top: 0;
+    bottom: 0;
+    background: #f79c5a;
+}
+
+#card-help .help-item:nth-child(2n) {
+    flex-direction: row-reverse;
+    margin: 0 0 0.8rem 2rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+    border-right: none;
+    border-left: 1px solid #f09858;
+}
+
+#card-help .help-item:nth-child(2n)::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    width: 50%;
+    top: 0;
+    bottom: 0;
+    background: #f0c4a4;
+}
+
+#card-help .help-item label {
+    font-weight: 600;
+    color: #da8860;
+}
+
+#card-help .help-item a {
+    display: block;
+    position: relative;
+    z-index: 1;
+    font-size: 1.25rem;
+    font-style: italic;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+}
+
+#card-help .help-item:nth-child(2n) a {
+    color: #542808;
+    border-bottom: 1px solid #542808;
+}
 
 #moon {
     offset-path: circle(400px at 0 0);

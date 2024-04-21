@@ -1,8 +1,34 @@
 let _controls = [
     { id: 'intro', bgColor: '#ffffff66', dollInCard: true, dollInPhoto: false, showIgLinkArea: true },
     { id: 'photo', bgColor: '#ffffffaa', dollInCard: false, dollInPhoto: true, showIgLinkArea: false },
-    { id: 'map', bgColor: '#ffffffaa', dollInCard: false, dollInPhoto: false, showIgLinkArea: false }
+    { id: 'map', bgColor: '#ffffffaa', dollInCard: false, dollInPhoto: false, showIgLinkArea: false },
+    { id: 'seat', bgColor: '#ffffffaa', dollInCard: false, dollInPhoto: false, showIgLinkArea: false },
+    { id: 'ig', bgColor: '#ffffffaa', dollInCard: false, dollInPhoto: false, showIgLinkArea: false },
+    { id: 'help', bgColor: '#ffffffaa', dollInCard: false, dollInPhoto: false, showIgLinkArea: false }
 ];
+
+let _seats = [
+    { id: 'seat0', top: 12, left: 50 },
+    { id: 'seat1', top: 16, left: 85 },
+    { id: 'seat2', top: 28, left: 65 },
+    { id: 'seat3', top: 26, left: 85 },
+    { id: 'seat4', top: 43, left: 65 },
+    { id: 'seat5', top: 43, left: 85 },
+    { id: 'seat6', top: 55, left: 65 },
+    { id: 'seat7', top: 55, left: 85 },
+    { id: 'seat8', top: 6, left: 10 },
+    { id: 'seat9', top: 18, left: 10 },
+    { id: 'seat10', top: 18, left: 28 },
+    { id: 'seat11', top: 29, left: 10 },
+    { id: 'seat12', top: 29, left: 28 },
+    { id: 'seat13', top: 44, left: 10 },
+    { id: 'seat14', top: 44, left: 28 },
+    { id: 'seat15', top: 66, left: 16 },
+    { id: 'seat16', top: 66, left: 34 },
+    { id: 'seat17', top: 66, left: 52 },
+    { id: 'seat18', top: 66, left: 70 },
+    { id: 'seat19', top: 66, left: 88 }
+]
 
 let btnEnter;
 
@@ -18,6 +44,7 @@ window.onload = function () {
 
     // ig filter
     const igFilterClickArea = document.getElementById('ig-filter-click-area');
+    const igFilter = document.getElementById('ig-filter');
     const igFilterLink = document.getElementById('ig-filter-link');
     igFilterClickArea.addEventListener('click', function(e) {
         igFilterLink.click();
@@ -32,6 +59,13 @@ window.onload = function () {
     const dollInPhoto = document.getElementById('wedding-doll-in-photo');
     const card = document.getElementById('pg-content-card');
 
+    // seats
+    for (let seat of _seats) {
+        const ts = document.getElementById(seat.id);
+        ts.style['top'] = seat.top + 'vh';
+        ts.style['left'] = seat.left + 'vw';
+    }
+
     for (let control of _controls) {
         document.getElementById('anchor-' + control.id).addEventListener('click', function (e) {
             hideAllContent();
@@ -45,10 +79,12 @@ window.onload = function () {
                 // landscape or portrait
                 if (window.matchMedia("(orientation: portrait)").matches) {
                     igFilterClickArea.classList.remove('d-none');
+                    igFilter.classList.remove('d-none');
                 }
             }
             else {
                 igFilterClickArea.classList.add('d-none');
+                igFilter.classList.add('d-none');
             }
         });
 
