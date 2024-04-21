@@ -561,7 +561,6 @@ body {
     border-bottom: 1px solid #f09858;
     padding: 1rem;
     margin: 0 2rem 0.8rem 0;
-    border-radius: 0 0.5rem 0.5rem 0;
     position: relative;
     display: flex;
     align-items: center;
@@ -585,7 +584,6 @@ body {
 #card-help .help-item:nth-child(2n) {
     flex-direction: row-reverse;
     margin: 0 0 0.8rem 2rem;
-    border-radius: 0.5rem 0 0 0.5rem;
     border-right: none;
     border-left: 1px solid #f09858;
 }
@@ -613,12 +611,10 @@ body {
     font-style: italic;
     color: #fff;
     text-decoration: none;
-    border-bottom: 1px solid #fff;
 }
 
 #card-help .help-item:nth-child(2n) a {
     color: #542808;
-    border-bottom: 1px solid #542808;
 }
 
 #moon {
