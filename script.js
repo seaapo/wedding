@@ -31,18 +31,6 @@ let _seats = [
 ];
 
 let _seatmap = [
-    { name: '新娘-哥哥', num: 0 },
-    { name: '露西', num: 0 },
-    { name: '翊庭', num: 0 },
-    { name: '何寳生', num: 0 },
-    { name: '李銘堯', num: 0 },
-    { name: '崔姨爹', num: 0 },
-    { name: '錦雯阿姨', num: 0 },
-    { name: '崔婷', num: 0 },
-    { name: '崔茜茜', num: 0 },
-    { name: '新娘-姨婆', num: 0 },
-    { name: '新娘-大阿姨一家', num: 0 },
-    { name: '呂碧瑄', num: 0 },
     { name: '龍頭', num: 2 },
     { name: '阿比', num: 2 },
     { name: '智睿一家人', num: 2 },
