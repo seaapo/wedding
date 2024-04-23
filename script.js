@@ -28,7 +28,12 @@ let _seats = [
     { id: 'seat17', top: 66, left: 52 },
     { id: 'seat18', top: 66, left: 70 },
     { id: 'seat19', top: 66, left: 88 }
-]
+];
+
+let _seatmap = [
+    { name: 'xxx', num: 0 },
+    { name: 'ooo', num: 1 }
+];
 
 let btnEnter;
 
@@ -65,6 +70,36 @@ window.onload = function () {
         ts.style['top'] = seat.top + 'vh';
         ts.style['left'] = seat.left + 'vw';
     }
+
+    // seat search
+    const seatSelect = document.getElementById('selectSeatSearch');
+    const txtSeatRet = document.getElementById('txtSeatRet');
+
+    for (let seat of _seatmap) {
+        const op = document.createElement("option");
+        op.text = seat.name;
+        seatSelect.add(op);
+    }
+    
+    seatSelect.addEventListener('change', function(e) {
+        let foundSeat = _seatmap.find(s => s.name == e.target.value);
+
+        if (foundSeat) {
+            const foundSeatEle = document.getElementById('seat' + foundSeat.num);
+            if (foundSeatEle) {
+                // clear last data
+                txtSeatRet.textContent = '';
+                for (let seat of _seats) {
+                    const ts = document.getElementById(seat.id);
+                    ts?.classList.remove('active');
+                }
+
+                foundSeatEle.classList.add('active');
+                txtSeatRet.textContent = foundSeat.num;
+            }
+        }
+        
+    });
 
     for (let control of _controls) {
         document.getElementById('anchor-' + control.id).addEventListener('click', function (e) {

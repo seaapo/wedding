@@ -511,16 +511,18 @@ body {
     margin-right: auto;
 }
 
-#card-seat .wrapper {
-    width: 100vw;
-    height: calc(100vh - 100px);
-    overflow: hidden;
-    position: relative;
+.card .content #card-seat {
+    margin-top: 0.5rem;
 }
 
-#card-seat .wrapper img {
-    width: 100%;
-    object-fit: contain;
+#card-seat .wrapper {
+    width: calc(100vw - 2px);
+    height: calc(100vh - 170px);
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #000;
+    margin-top: 0.5rem;
+    background: #fff;
 }
 
 #card-seat .wrapper .seats {
@@ -529,26 +531,56 @@ body {
     left: 0;
 }
 
-#card-seat .wrapper .seats > .seat {
+#card-seat .wrapper .seats > .seat,
+#card-seat .wrapper .seats > .stage-item {
     width: 4.5rem;
     height: 4.5rem;
     border-radius: 4.5rem;
-    background: #000;
-    color: #fff;
+    border: 1px solid #000;
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
     transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
-#card-seat .wrapper .seats > .seat#seat0 {
-    top: 10vh;
+#card-seat .wrapper .seats > .seat.active {
+    background: #ffc323;
+}
+
+#card-seat .wrapper .seats > #seat0 {
+    border-color: #f00;
+}
+
+#card-seat .wrapper .seats > .stage-item {
+    border-radius: 0;
+}
+
+#card-seat .wrapper .seats > .stage {
+    width: 6rem;
+    height: 2.6rem;
+    top: 1.3rem;
     left: 50vw;
 }
 
-#card-seat .wrapper map area {
-    border: 1px solid #000;
+#card-seat .wrapper .seats > .door {
+    height: 10vh;
+    width: 8vw;
+    top: 55vh;
+    left: 4vw;
+}
+
+#card-seat .wrapper .seats > .aisle {
+    width: 35vw;
+    height: 35vh;
+    top: 18vh;
+    left: 12vw;
+    border: 20px solid #d70606;
+    border-top: none;
+    border-left: none;
+    transform: none;
 }
 
 #card-help .help-container {

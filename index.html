@@ -542,9 +542,20 @@
                         </div>
                     </div>
                     <div id="card-seat" class="card-content d-none">
+                        <div class="txt-normal">
+                            請選取您的名字來查詢桌位
+                            <select id="selectSeatSearch">
+                                <option></option>
+                            </select>
+                            <div>
+                                你的桌位是第<span id="txtSeatRet">?</span>桌
+                            </div>
+                        </div>
                         <div class="wrapper">
-                            <img id="wedding-seat" usemap="#seatmap" src="resources/seat.png">
                             <div class="seats">
+                                <div class="stage-item stage">舞台</div>
+                                <div class="stage-item door">入口</div>
+                                <div class="stage-item aisle"></div>
                                 <div id="seat0" class="seat">主桌</div>
                                 <div id="seat1" class="seat">1</div>
                                 <div id="seat2" class="seat">2</div>
@@ -566,11 +577,6 @@
                                 <div id="seat18" class="seat">18</div>
                                 <div id="seat19" class="seat">19</div>
                             </div>
-                            <map name="seatmap">
-                                <area shape="rect" coords="34,44,270,350" alt="Computer" href="">
-                                <area shape="rect" coords="290,172,333,250" alt="Phone" href="">
-                                <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="">
-                            </map>
                         </div>
                     </div>
                     <div id="card-ig" class="card-content d-none">
