@@ -552,7 +552,7 @@ body {
 }
 
 #card-help .help-container {
-    max-height: calc(100vh - 150px);
+    max-height: calc(100vh - 120px);
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -567,7 +567,6 @@ body {
     justify-content: space-between;
     font-size: 1.25rem;
     border-left: none;
-    border-right: 1px solid #f09858;
     background: #fcf6ec;
 }
 
@@ -581,21 +580,36 @@ body {
     background: #f79c5a;
 }
 
+#card-help .help-item::after {
+    content: '';
+    position: absolute;
+    right: 4px;
+    width: 0;
+    height: 0;
+    top: 0;
+    bottom: 0;
+    border-left: 30px solid #000;
+    border-right: 30px solid #f00;
+    border-bottom: 15px solid transparent;
+}
+
 #card-help .help-item:nth-child(2n) {
     flex-direction: row-reverse;
     margin: 0 0 0.8rem 2rem;
     border-right: none;
-    border-left: 1px solid #f09858;
 }
 
 #card-help .help-item:nth-child(2n)::before {
-    content: '';
-    position: absolute;
     left: 4px;
     width: 50%;
-    top: 0;
-    bottom: 0;
     background: #f0c4a4;
+}
+
+#card-help .help-item:nth-child(2n)::after {
+    left: 4px;
+    right: inherit;
+    border-left: 30px solid #f00;
+    border-right: 30px solid #000;
 }
 
 #card-help .help-item label {
@@ -611,6 +625,7 @@ body {
     font-style: italic;
     color: #fff;
     text-decoration: none;
+    border-bottom: 1px solid;
 }
 
 #card-help .help-item:nth-child(2n) a {
