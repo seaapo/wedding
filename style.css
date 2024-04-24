@@ -47,6 +47,7 @@ body {
 
 select {
     margin: 5px 0;
+    min-width: 50vw;
 }
 
 optgroup {
@@ -268,7 +269,8 @@ optgroup {
 }
 
 .svg-container #svg-view {
-    bottom: 0;
+    left:0;
+    bottom: 2rem;
     z-index: 1;
 }
 
@@ -286,10 +288,16 @@ optgroup {
     padding: 0.25rem 0.5rem;
     border-radius: 0.5rem;
     text-align: center;
-    background-color: #dea48e22;
+    background-color: #f3d8bd;
     font-weight: 600;
     letter-spacing: 2px;
     color: #a1481c;
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .anchors .anchor:hover {
@@ -322,7 +330,7 @@ optgroup {
     z-index: 2;
     overflow-y: hidden;
     overflow-x: hidden;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     background: #ffffff44;
     position: fixed;
     left: 50%;
@@ -482,6 +490,7 @@ optgroup {
 
 .card .content #card-seat {
     margin-top: 0.5rem;
+    font-weight: 600;
 }
 
 #card-seat .wrapper {
@@ -596,7 +605,6 @@ optgroup {
     justify-content: space-between;
     font-size: 1.25rem;
     border-left: none;
-    background: #fcf6ec;
 }
 
 #card-help .help-item::before {

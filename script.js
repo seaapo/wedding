@@ -122,7 +122,6 @@ window.onload = function () {
     door.addEventListener("click", openDoor);
 
     // main content tabs
-    const dollInCard = document.getElementById('wedding-doll');
     const dollInPhoto = document.getElementById('wedding-doll-in-photo');
     const card = document.getElementById('pg-content-card');
 
@@ -174,8 +173,6 @@ window.onload = function () {
             hideAllContent();
             document.getElementById('anchor-' + control.id).classList.add('active');
             document.getElementById('card-' + control.id).classList.remove('d-none');
-            card.style['background-color'] = control.bgColor;
-            control.dollInCard ? dollInCard.classList.remove('d-none') : dollInCard.classList.add('d-none');
             control.dollInPhoto ? dollInPhoto.classList.remove('d-none') : dollInPhoto.classList.add('d-none');
         });
 
