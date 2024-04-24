@@ -97,8 +97,7 @@ optgroup {
     color: #830707;
 }
 
-#pg-welcome #wedding-img,
-#wedding-doll {
+#pg-welcome #wedding-img {
     width: 85vw;
     position: absolute;
     bottom: 1rem;
@@ -266,45 +265,6 @@ optgroup {
     right: 0;
     opacity: 0.8;
     transform: translateY(20%);
-}
-
-#ig-filter {
-    position: absolute;
-    border: 1px solid #763da2;
-    border-radius: 70% / 55%;
-    padding: 1rem;
-    bottom: 8.5rem;
-    left: 45%;
-    background: #fae6ff;
-    box-shadow: 0 1px 1px 0px;
-}
-
-#ig-filter > a {
-    text-decoration: none;
-}
-
-#ig-filter::after {
-    content: '';
-    position: absolute;
-    height: 100px;
-    width: 0.5rem;
-    background: #3b1b53;
-    left: 50%;
-    transform: translateX(-50%) rotate(0deg);
-    top: 101%;
-}
-
-#ig-filter-click-area {
-    position: absolute;
-    bottom: 8.1rem;
-    left: 40%;
-    width: 8rem;
-    height: 4rem;
-    z-index: 2;
-}
-
-#ig-filter-click-area:hover {
-    cursor: pointer;
 }
 
 .svg-container #svg-view {
@@ -589,6 +549,27 @@ optgroup {
     border-top: none;
     border-left: none;
     transform: none;
+}
+
+#card-ig {
+    margin-top: 0;
+}
+
+#card-ig .wrapper {
+    padding-top: 1rem;
+    background: radial-gradient(circle farthest-side at center, #314ac0, #0f0e12);
+    height: calc(100vh - 40px);
+}
+
+#card-ig .wrapper #ig-link {
+    font-size: 1.35rem;
+    color: #fff;
+}
+
+#card-ig .wrapper img {
+    margin-top: 1rem;
+    object-fit: contain;
+    height: calc(100vh - 150px);
 }
 
 #card-help .help-container {
@@ -1169,11 +1150,6 @@ optgroup {
         width: 50vw;
         left: 50%;
         transform: translateX(-50%);
-    }
-
-    #ig-filter,
-    #ig-filter-click-area  {
-        display: none;
     }
 
     .main .anchors {

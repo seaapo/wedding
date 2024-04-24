@@ -1,10 +1,10 @@
 let _controls = [
-    { id: 'intro', bgColor: '#ffffff66', dollInCard: true, dollInPhoto: false, showIgLinkArea: true },
-    { id: 'photo', bgColor: '#ffffffaa', dollInCard: false, dollInPhoto: true, showIgLinkArea: false },
-    { id: 'map', bgColor: '#ffffffaa', dollInCard: false, dollInPhoto: false, showIgLinkArea: false },
-    { id: 'seat', bgColor: '#ffffffaa', dollInCard: false, dollInPhoto: false, showIgLinkArea: false },
-    { id: 'ig', bgColor: '#ffffffaa', dollInCard: false, dollInPhoto: false, showIgLinkArea: false },
-    { id: 'help', bgColor: '#ffffffaa', dollInCard: false, dollInPhoto: false, showIgLinkArea: false }
+    { id: 'intro', bgColor: '#ffffff66', dollInCard: true, dollInPhoto: false, showBg: false },
+    { id: 'photo', bgColor: '#ffffffaa', dollInCard: false, dollInPhoto: true, showBg: false },
+    { id: 'map', bgColor: '#ffffffaa', dollInCard: false, dollInPhoto: false, showBg: false },
+    { id: 'seat', bgColor: '#ffffffaa', dollInCard: false, dollInPhoto: false, showBg: false },
+    { id: 'ig', bgColor: '#ffffffaa', dollInCard: false, dollInPhoto: false, showBg: true },
+    { id: 'help', bgColor: '#ffffffaa', dollInCard: false, dollInPhoto: false, showBg: false }
 ];
 
 let _seats = [
@@ -116,12 +116,6 @@ window.onload = function () {
     });
 
     // ig filter
-    const igFilterClickArea = document.getElementById('ig-filter-click-area');
-    const igFilter = document.getElementById('ig-filter');
-    const igFilterLink = document.getElementById('ig-filter-link');
-    igFilterClickArea.addEventListener('click', function (e) {
-        igFilterLink.click();
-    });
 
     // door
     var door = document.getElementById("door");
@@ -183,18 +177,6 @@ window.onload = function () {
             card.style['background-color'] = control.bgColor;
             control.dollInCard ? dollInCard.classList.remove('d-none') : dollInCard.classList.add('d-none');
             control.dollInPhoto ? dollInPhoto.classList.remove('d-none') : dollInPhoto.classList.add('d-none');
-
-            if (control.showIgLinkArea) {
-                // landscape or portrait
-                if (window.matchMedia("(orientation: portrait)").matches) {
-                    igFilterClickArea.classList.remove('d-none');
-                    igFilter.classList.remove('d-none');
-                }
-            }
-            else {
-                igFilterClickArea.classList.add('d-none');
-                igFilter.classList.add('d-none');
-            }
         });
 
         // map
