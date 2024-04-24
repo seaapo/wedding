@@ -47,7 +47,7 @@ body {
 
 select {
     margin: 5px 0;
-    min-width: 50vw;
+    min-width: 50%;
 }
 
 optgroup {
@@ -507,6 +507,8 @@ optgroup {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 #card-seat .wrapper .seats > .seat,
@@ -536,24 +538,24 @@ optgroup {
 }
 
 #card-seat .wrapper .seats > .stage {
-    width: 6rem;
+    width: 6%;
     height: 2.6rem;
     top: 1.3rem;
-    left: 50vw;
+    left: 50%;
 }
 
 #card-seat .wrapper .seats > .door {
     height: 10vh;
-    width: 8vw;
+    width: 10%;
     top: 55vh;
-    left: 4vw;
+    left: 5%;
 }
 
 #card-seat .wrapper .seats > .aisle {
-    width: 35vw;
+    width: 35%;
     height: 35vh;
     top: 18vh;
-    left: 12vw;
+    left: 12%;
     border: 20px solid #d70606;
     border-top: none;
     border-left: none;
@@ -1199,6 +1201,14 @@ optgroup {
 
     #card-photo #photo-gallery {
         margin: 1rem 2rem 0 2rem;
+    }
+
+    #card-seat .wrapper .seats {
+        width: 50%;
+    }
+
+    #card-seat .wrapper .seats > .stage {
+        width: 12%;
     }
 }
 

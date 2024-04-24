@@ -16,13 +16,13 @@ let _seats = [
     { id: 'seat5', top: 43, left: 85 },
     { id: 'seat6', top: 55, left: 65 },
     { id: 'seat7', top: 55, left: 85 },
-    { id: 'seat8', top: 6, left: 10 },
-    { id: 'seat9', top: 18, left: 10 },
-    { id: 'seat10', top: 18, left: 28 },
-    { id: 'seat11', top: 29, left: 10 },
-    { id: 'seat12', top: 29, left: 28 },
-    { id: 'seat13', top: 44, left: 10 },
-    { id: 'seat14', top: 44, left: 28 },
+    { id: 'seat8', top: 6, left: 12 },
+    { id: 'seat9', top: 18, left: 12 },
+    { id: 'seat10', top: 18, left: 32 },
+    { id: 'seat11', top: 29, left: 12 },
+    { id: 'seat12', top: 29, left: 32 },
+    { id: 'seat13', top: 44, left: 12 },
+    { id: 'seat14', top: 44, left: 32 },
     { id: 'seat15', top: 66, left: 16 },
     { id: 'seat16', top: 66, left: 34 },
     { id: 'seat17', top: 66, left: 52 },
@@ -129,7 +129,7 @@ window.onload = function () {
     for (let seat of _seats) {
         const ts = document.getElementById(seat.id);
         ts.style['top'] = seat.top + 'vh';
-        ts.style['left'] = seat.left + 'vw';
+        ts.style['left'] = seat.left + '%';
     }
 
     // seat search
