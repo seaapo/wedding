@@ -393,7 +393,7 @@ window.onload = function () {
     if (imgPlaceHolder) {
         for (let i = 1; i <= 7; i++) {
             const img = document.createElement("img");
-            img.src = 'resources/pic' + i + '.jpg';
+            img.src = 'resources/a' + i + '.jpg';
             img.classList.add('photo');
             const gallery = document.getElementById('photo-gallery');
             gallery.appendChild(img);
