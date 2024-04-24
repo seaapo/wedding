@@ -31,46 +31,76 @@ let _seats = [
 ];
 
 let _seatmap = [
-    { name: '龍頭', num: 2 },
-    { name: '阿比', num: 2 },
-    { name: '智睿一家人', num: 2 },
-    { name: '瓜瓜', num: 2 },
-    { name: 'V帥', num: 2 },
-    { name: '小歐', num: 2 },
-    { name: 'Amy', num: 2 },
-    { name: '鈺涵', num: 4 },
-    { name: '小凰', num: 4 },
-    { name: '米森', num: 4 },
-    { name: '阿德', num: 4 },
-    { name: '阿原', num: 4 },
-    { name: '哲明', num: 4 },
-    { name: 'Mike', num: 4 },
-    { name: '費歐', num: 4 },
-    { name: '欣怡', num: 4 },
-    { name: '楊浩', num: 6 },
-    { name: '李珩', num: 6 },
-    { name: '祥儀', num: 6 },
-    { name: '奶奶', num: 6 },
-    { name: '婉君', num: 6 },
-    { name: '鈉鎂', num: 6 },
-    { name: '家秀', num: 6 },
-    { name: '寶哥', num: 6 },
-    { name: '五香', num: 6 },
-    { name: '梅振群', num: 6 },
-    { name: '王琪', num: 3 },
-    { name: 'Peggy一家', num: 3 },
-    { name: '予佩', num: 3 },
-    { name: '小毛一家', num: 3 },
-    { name: '佳良', num: 3 },
-    { name: '秋嬑', num: 3 },
-    { name: '岱洋', num: 3 },
-    { name: '林源祥', num: 5 },
-    { name: '賴泓俊', num: 5 },
-    { name: '吳世民', num: 5 },
-    { name: '徐易成', num: 5 },
-    { name: '陳勇杕', num: 5 },
-    { name: '廖哲男', num: 5 },
-    { name: '惠美一家人', num: 5 },
+    {
+        groupname: '小腳丫1',
+        num: 2,
+        member: [
+            '龍頭',
+            '阿比',
+            '智睿一家人',
+            '瓜瓜',
+            'V帥',
+            '小歐',
+            'Amy',
+        ]
+    },
+    {
+        groupname: '小腳丫2',
+        num: 4,
+        member: [
+            '鈺涵',
+            '小凰',
+            '米森',
+            '阿德',
+            '阿原',
+            '哲明',
+            'Mike',
+            '費歐',
+            '欣怡',
+        ]
+    },
+    {
+        groupname: '小腳丫3&山友',
+        num: 6,
+        member: [
+            '楊浩',
+            '李珩',
+            '祥儀',
+            '奶奶',
+            '婉君',
+            '鈉鎂',
+            '家秀',
+            '寶哥',
+            '五香',
+            '梅振群'
+        ]
+    },
+    {
+        groupname: '彰友會',
+        num: 3,
+        member: [
+            '王琪',
+            'Peggy一家',
+            '予佩',
+            '小毛一家',
+            '佳良',
+            '秋嬑',
+            '岱洋'
+        ]
+    },
+    {
+        groupname: '同事&朋友',
+        num: 5,
+        member: [
+            '林源祥',
+            '賴泓俊',
+            '吳世民',
+            '徐易成',
+            '陳勇杕',
+            '廖哲男',
+            '惠美一家人'
+        ]
+    }
 ];
 
 let btnEnter;
@@ -89,7 +119,7 @@ window.onload = function () {
     const igFilterClickArea = document.getElementById('ig-filter-click-area');
     const igFilter = document.getElementById('ig-filter');
     const igFilterLink = document.getElementById('ig-filter-link');
-    igFilterClickArea.addEventListener('click', function(e) {
+    igFilterClickArea.addEventListener('click', function (e) {
         igFilterLink.click();
     });
 
@@ -113,17 +143,23 @@ window.onload = function () {
     const seatSelect = document.getElementById('selectSeatSearch');
     const txtSeatRet = document.getElementById('txtSeatRet');
 
-    for (let seat of _seatmap) {
-        const op = document.createElement("option");
-        op.text = seat.name;
-        seatSelect.add(op);
-    }
-    
-    seatSelect.addEventListener('change', function(e) {
-        let foundSeat = _seatmap.find(s => s.name == e.target.value);
+    for (let seatg of _seatmap) {
+        const opg = document.createElement("optgroup");
+        opg.label = '> ' + seatg.groupname;
+        seatSelect.add(opg);
 
-        if (foundSeat) {
-            const foundSeatEle = document.getElementById('seat' + foundSeat.num);
+        for (let member of seatg.member) {
+            const op = document.createElement("option");
+            op.text = member;
+            opg.appendChild(op);
+        }
+    }
+
+    seatSelect.addEventListener('change', function (e) {
+        let foundSeatg = _seatmap.find(sg => sg.member.find(s => s == e.target.value));
+
+        if (foundSeatg) {
+            const foundSeatEle = document.getElementById('seat' + foundSeatg.num);
             if (foundSeatEle) {
                 // clear last data
                 txtSeatRet.textContent = '';
@@ -133,10 +169,10 @@ window.onload = function () {
                 }
 
                 foundSeatEle.classList.add('active');
-                txtSeatRet.textContent = foundSeat.num;
+                txtSeatRet.textContent = foundSeatg.num;
             }
         }
-        
+
     });
 
     for (let control of _controls) {
@@ -174,7 +210,7 @@ window.onload = function () {
             const linkMap = document.getElementById(map.linkId);
             const targetMap = document.getElementById(map.targetId);
             if (linkMap && targetMap) {
-                linkMap.addEventListener('click', function(e) {
+                linkMap.addEventListener('click', function (e) {
 
                     for (let m of mapDatas) {
                         if (m.targetId !== map.targetId) {

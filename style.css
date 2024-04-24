@@ -45,6 +45,15 @@ body {
     text-align: center;
 }
 
+select {
+    margin: 5px 0;
+}
+
+optgroup {
+    text-decoration: underline;
+    background: #fff;
+}
+
 #btn-enter {
     position: relative;
     display: none;
