@@ -557,19 +557,27 @@ optgroup {
 
 #card-ig .wrapper {
     padding-top: 1rem;
-    background: radial-gradient(circle farthest-side at center, #314ac0, #0f0e12);
     height: calc(100vh - 40px);
 }
 
-#card-ig .wrapper #ig-link {
+#card-ig .wrapper #ig-intro {
     font-size: 1.35rem;
-    color: #fff;
+    color: #d03905;
+    text-decoration: none;
 }
 
-#card-ig .wrapper img {
-    margin-top: 1rem;
+#card-ig .wrapper #ig-link img {
+    width: 10vw;
+    padding: 0.5rem;
+}
+
+#card-ig .wrapper #ig-presentation {
+    padding: 1.5rem;
     object-fit: contain;
-    height: calc(100vh - 150px);
+    /* width: 80vw; */
+    height: calc(85vh - 150px);
+    border: 5px solid #ffdea4;
+    box-shadow: inset 0px 0px 4px 2px #b17836;
 }
 
 #card-help .help-container {
