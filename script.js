@@ -32,6 +32,30 @@ let _seats = [
 
 let _seatmap = [
     {
+        groupname: '主桌',
+        num: 0,
+        member: [
+            '新郎爸媽',
+            '新郎舅舅',
+            '新郎舅媽',
+            '新娘爸媽',
+            '新娘舅舅',
+            '新娘舅媽',
+            '新娘叔叔',
+            '新娘姨婆'
+        ]
+    },
+    {
+        groupname: '新郎親戚',
+        num: 1,
+        member: [
+            '沅峰哥哥一家',
+            '小瑜',
+            '昭瑩一家',
+            '許書萍'
+        ]
+    },
+    {
         groupname: '小腳丫1',
         num: 2,
         member: [
@@ -42,6 +66,19 @@ let _seatmap = [
             'V帥',
             '小歐',
             'Amy',
+        ]
+    },
+    {
+        groupname: '彰友會',
+        num: 3,
+        member: [
+            '王琪',
+            'Peggy一家',
+            '予佩',
+            '小毛一家',
+            '佳良',
+            '秋嬑',
+            '岱洋'
         ]
     },
     {
@@ -57,6 +94,19 @@ let _seatmap = [
             'Mike',
             '費歐',
             '欣怡',
+        ]
+    },
+    {
+        groupname: '同事&朋友',
+        num: 5,
+        member: [
+            '林源祥',
+            '賴泓俊',
+            '吳世民',
+            '徐易成',
+            '陳勇杕',
+            '廖哲男',
+            '惠美一家人'
         ]
     },
     {
@@ -76,29 +126,157 @@ let _seatmap = [
         ]
     },
     {
-        groupname: '彰友會',
-        num: 3,
+        groupname: '益群與閨密',
+        num: 7,
         member: [
-            '王琪',
-            'Peggy一家',
-            '予佩',
-            '小毛一家',
-            '佳良',
-            '秋嬑',
-            '岱洋'
+            'Frankie',
+            'Ben',
+            'Steven H.', 
+            'Ligo', 
+            'Abbey', 
+            '假問一家', 
+            '祥徵', 
+            '涵文', 
+            '鄭杰明'
         ]
     },
     {
-        groupname: '同事&朋友',
-        num: 5,
+        groupname: '新娘親戚-王家2',
+        num: 8,
         member: [
-            '林源祥',
-            '賴泓俊',
-            '吳世民',
-            '徐易成',
-            '陳勇杕',
-            '廖哲男',
-            '惠美一家人'
+            '惠珠小姑姑一家', 
+            '徐同權一家', 
+            '王姿云一家', 
+            '邱宏源', 
+            '葉斯松'
+        ]
+    },
+    {
+        groupname: '新娘親戚-朱家3',
+        num: 9,
+        member: [
+            '桂美大阿姨一家', 
+            '呂碧瑄一家'
+        ]
+    },
+    {
+        groupname: '新娘親戚-王家1',
+        num: 10,
+        member: [
+            '朝正小叔叔一家', 
+            '麗玲大姑媽', 
+            '俊博', 
+            '丁秀雲一家', 
+            '王慧鈞', 
+            '廖秋昌'
+        ]
+    },
+    {
+        groupname: '新娘親戚-朱家2',
+        num: 11,
+        member: [
+            '錦雯阿姨一家',
+            '中壢姨婆一家'
+        ]
+    },
+    {
+        groupname: '新娘親戚-朱家1',
+        num: 12,
+        member: [
+            '韋勝哥哥一家', 
+            '朱禹一家', 
+            '何寶生', 
+            '李銘堯'
+        ]
+    },
+    {
+        groupname: '小花同事1',
+        num: 13,
+        member: [
+            'Joanne', 
+            '如一', 
+            '玫如', 
+            'Freya', 
+            'Vivien', 
+            'Nic', 
+            '藹倫一家', 
+            '爵宇一家'
+        ]
+    },
+    {
+        groupname: '小花同事2',
+        num: 14,
+        member: [
+            '連san', 
+            '巧如一家', 
+            '溫san一家', 
+            '秀蜜', 
+            '明業', 
+            '宇捷'
+        ]
+    },
+    {
+        groupname: '東吳基服',
+        num: 15,
+        member: [
+            '毓茜一家', 
+            '又魚一家', 
+            '惠玲', 
+            '宛君'
+        ]
+    },
+    {
+        groupname: '不分你我愛羽球',
+        num: 16,
+        member: [
+            '貝蒂', 
+            '747', 
+            '馥庭', 
+            '定澤', 
+            '邱恩容', 
+            '楊靈', 
+            '闕楷諭', 
+            '嘉珍', 
+            '逸飛一家'
+        ]
+    },
+    {
+        groupname: '新娘媽媽朋友同事',
+        num: 17,
+        member: [
+            '許丁財一家', 
+            '廖雪珀Cecile一家', 
+            '徐正光一家', 
+            '游麗雯', 
+            '劉中榮', 
+            '孔慶勇'
+        ]
+    },
+    {
+        groupname: '新娘爸爸恆毅同學1',
+        num: 19,
+        member: [
+            '王慧國一家', 
+            '韓錫恆一家', 
+            '黃育才/鄭霞一家', 
+            '陳光頫', 
+            '陳豪華', 
+            '李如璿', 
+            '王景富'
+        ]
+    },
+    {
+        groupname: '新娘爸爸恆毅同學2',
+        num: 18,
+        member: [
+            '陳英傑一家', 
+            '徐明', 
+            '戴士誠', 
+            '費樹城', 
+            '陳達锋', 
+            '黃文輝', 
+            '劉三光', 
+            '胡聖國'
         ]
     }
 ];
@@ -138,7 +316,7 @@ window.onload = function () {
 
     for (let seatg of _seatmap) {
         const opg = document.createElement("optgroup");
-        opg.label = '> ' + seatg.groupname;
+        opg.label = '< ' + seatg.groupname + ' >';
         seatSelect.add(opg);
 
         for (let member of seatg.member) {
