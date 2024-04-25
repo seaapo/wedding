@@ -380,6 +380,10 @@ optgroup {
     text-shadow: 0px 0px 30px #f68223;
 }
 
+.card .content #card-intro {
+    margin-top: 2rem;
+}
+
 #card-intro .location {
     margin-top: 1rem;
     color: #840505;
@@ -561,7 +565,6 @@ optgroup {
 }
 
 #card-ig .wrapper {
-    padding-top: 0.5rem;
     height: calc(100vh - 40px);
 }
 
