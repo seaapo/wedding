@@ -299,10 +299,6 @@ window.onload = function () {
     var door = document.getElementById("door");
     door.addEventListener("click", openDoor);
 
-    // main content tabs
-    const dollInPhoto = document.getElementById('wedding-doll-in-photo');
-    const card = document.getElementById('pg-content-card');
-
     // seats
     for (let seat of _seats) {
         const ts = document.getElementById(seat.id);
@@ -351,7 +347,6 @@ window.onload = function () {
             hideAllContent();
             document.getElementById('anchor-' + control.id).classList.add('active');
             document.getElementById('card-' + control.id).classList.remove('d-none');
-            control.dollInPhoto ? dollInPhoto.classList.remove('d-none') : dollInPhoto.classList.add('d-none');
         });
 
         // map
@@ -389,7 +384,7 @@ window.onload = function () {
         }
     }
 
-    const imgPlaceHolder = document.getElementById('photo-placeholder');
+    const imgPlaceHolder = document.getElementById('wedding-photo');
     if (imgPlaceHolder) {
         for (let i = 1; i <= 7; i++) {
             const img = document.createElement("img");
@@ -398,7 +393,7 @@ window.onload = function () {
             const gallery = document.getElementById('photo-gallery');
             gallery.appendChild(img);
             img.addEventListener('click', function () {
-                imgPlaceHolder.style['background-image'] = "url(" + img.src + ")";
+                imgPlaceHolder.src = img.src;
             });
         }
     }
