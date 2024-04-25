@@ -452,13 +452,14 @@ optgroup {
 }
 
 #card-photo #photo-gallery .photo {
-    height: 6vh;
+    height: 5vh;
     margin: 0.3rem;
-    width: 6vh;
+    min-width: 5vh;
+    max-width: 5vh;
     border: 5px solid #f4f4f4;
     box-shadow: 1px 1px 4px 0px #4d4c4c;
     object-fit: cover;
-    border-radius: 1rem 0 1rem 0;
+    border-radius: 0.8rem 0 1rem 0;
 }
 
 #card-photo #photo-gallery .photo:hover {
@@ -576,7 +577,7 @@ optgroup {
     padding: 1rem;
     object-fit: contain;
     width: 80vw;
-    height: calc(80vh - 100px);
+    height: calc(80vh - 120px);
     box-shadow: inset 0px 0px 4px 2px #b17836;
     background: #ffffff8c;
     border: 10px solid;
