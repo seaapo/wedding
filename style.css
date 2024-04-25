@@ -493,6 +493,11 @@ optgroup {
     font-weight: 600;
 }
 
+#card-seat .desc {
+    color: #d03905;
+    font-size: 1.35rem;
+}
+
 #card-seat .wrapper {
     width: calc(100vw - 2px);
     height: calc(100vh - 170px);
@@ -538,7 +543,7 @@ optgroup {
 }
 
 #card-seat .wrapper .seats > .stage {
-    width: 6%;
+    width: 12%;
     height: 2.6rem;
     top: 1.3rem;
     left: 50%;
