@@ -607,12 +607,13 @@ optgroup {
     justify-content: space-between;
     font-size: 1.25rem;
     border-left: none;
+    overflow: hidden;
 }
 
 #card-help .help-item::before {
     content: '';
     position: absolute;
-    right: 4px;
+    right: 10px;
     width: 50%;
     top: 0;
     bottom: 0;
@@ -622,7 +623,7 @@ optgroup {
 #card-help .help-item::after {
     content: '';
     position: absolute;
-    right: 4px;
+    right: 0;
     width: 0;
     height: 0;
     top: 0;
@@ -645,7 +646,7 @@ optgroup {
 }
 
 #card-help .help-item:nth-child(2n)::after {
-    left: 4px;
+    left: 0;
     right: inherit;
     border-left: 30px solid #f00;
     border-right: 30px solid #000;
@@ -669,6 +670,22 @@ optgroup {
 
 #card-help .help-item:nth-child(2n) a {
     color: #542808;
+}
+
+#card-help .help-item .tail {
+    width: 15px;
+    position: absolute;
+    height: 120%;
+    right: -2px;
+    background: #f79c5a;
+    transform: rotate(15deg);
+    z-index: -1;
+}
+
+#card-help .help-item:nth-child(2n) .tail {
+    transform: rotate(-15deg);
+    left: -2px;
+    background: #f0c4a4;
 }
 
 #moon {
