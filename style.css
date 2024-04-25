@@ -47,7 +47,7 @@ body {
 
 select {
     margin: 5px 0;
-    min-width: 50%;
+    min-width: 60%;
 }
 
 optgroup {
@@ -345,8 +345,15 @@ optgroup {
 }
 
 .card .content .card-content {
-    margin: 2rem 0 0 0;
+    margin: 1rem 0 0 0;
     position: relative;
+}
+
+.card .content .card-content h3.title {
+    color: #d03905;
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin: 0.25rem 0;
 }
 
 .card .content .people {
@@ -432,10 +439,11 @@ optgroup {
 
 #card-photo #wedding-photo {
     width: 80vw;
-    height: calc(85vh - 160px);
+    height: calc(85vh - 170px);
     border: 10px solid;
     border-color: #ffd291 #ffe19c #ffd291 #ffe19c;
     padding: 1rem;
+    margin-top: 0.5rem;
     object-fit: contain;
     box-shadow: inset 0px 0px 4px 2px #b17836;
     background: #ffffff8c;
@@ -448,7 +456,7 @@ optgroup {
     overflow-x: auto;
     overflow-y: hidden;
     padding: 0 0 0.8rem 0;
-    margin: 0.8rem 1.2rem 0 1.2rem;
+    margin: 0.5rem 1.2rem 0 1.2rem;
 }
 
 #card-photo #photo-gallery .photo {
@@ -480,8 +488,7 @@ optgroup {
 }
 
 #card-seat .desc {
-    color: #d03905;
-    font-size: 1.35rem;
+    font-size: 1.2rem;
 }
 
 #card-seat .wrapper {
@@ -553,19 +560,9 @@ optgroup {
     transform: none;
 }
 
-#card-ig {
-    margin-top: 0;
-}
-
 #card-ig .wrapper {
-    padding-top: 1rem;
+    padding-top: 0.5rem;
     height: calc(100vh - 40px);
-}
-
-#card-ig .wrapper #ig-intro {
-    font-size: 1.35rem;
-    color: #d03905;
-    text-decoration: none;
 }
 
 #card-ig .wrapper #ig-link img {
@@ -584,8 +581,13 @@ optgroup {
     border-color: #ffd291 #ffe19c #ffd291 #ffe19c;
 }
 
+.card .content #card-help {
+    margin-top: 0.5rem;
+}
+
 #card-help .help-container {
     max-height: calc(100vh - 120px);
+    margin-top: 1rem;
     overflow-x: hidden;
     overflow-y: auto;
 }
