@@ -559,7 +559,7 @@ optgroup {
     top: 18vh;
     left: 12%;
     border: 20px solid #d70606;
-    border-bottom: 20px double #df8b61;
+    border-bottom: 30px double #df8b61;
     border-top: none;
     border-left: none;
     transform: none;
@@ -569,10 +569,10 @@ optgroup {
     content: '';
     position: absolute;
     width: 20px;
-    height: 20px;
+    height: 30px;
     background: #d70606;
     right: -20px;
-    bottom: -20px;
+    bottom: -30px;
 }
 
 #card-ig .wrapper {
