@@ -389,14 +389,15 @@ window.onload = function () {
 
     const imgPlaceHolder = document.getElementById('wedding-photo');
     if (imgPlaceHolder) {
-        for (let i = 1; i <= 7; i++) {
+        for (let i = 1; i <= 60; i++) {
             const img = document.createElement("img");
-            img.src = 'resources/a' + i + '.jpg';
+            img.src = './resources/thumb/a' + i + '.jpg';
             img.classList.add('photo');
             const gallery = document.getElementById('photo-gallery');
             gallery.appendChild(img);
             img.addEventListener('click', function () {
-                imgPlaceHolder.src = img.src;
+                const pieces = img.src.split('/');
+                imgPlaceHolder.src = 'resources/wedding/' + pieces[pieces.length - 1];
             });
         }
     }

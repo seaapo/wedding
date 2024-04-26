@@ -446,7 +446,7 @@ optgroup {
     height: calc(85vh - 170px);
     border: 10px solid;
     border-color: #ffd291 #ffe19c #ffd291 #ffe19c;
-    padding: 1rem;
+    padding: 0.8rem;
     margin-top: 0.5rem;
     object-fit: contain;
     box-shadow: inset 0px 0px 4px 2px #b17836;
@@ -1211,7 +1211,7 @@ optgroup {
     }
 
     .card .content {
-        margin-top: 2rem;
+        margin-top: 0.5rem;
     }
 
     .card .map .map-content {
