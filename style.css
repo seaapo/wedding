@@ -345,13 +345,13 @@ optgroup {
 }
 
 .card .content .card-content {
-    margin: 1rem 0 0 0;
+    margin: 0.8rem 0 0 0;
     position: relative;
 }
 
 .card .content .card-content h3.title {
-    color: #d03905;
-    font-size: 1.35rem;
+    color: #9e0808;
+    font-size: 1.5rem;
     font-weight: 600;
     margin: 0.25rem 0;
 }
@@ -391,9 +391,9 @@ optgroup {
 }
 
 .card .map-location {
-    font-weight: 800;
-    font-size: 1.5rem;
-    color: #9e0808;
+    font-weight: 600;
+    font-size: 1.35rem;
+    color: #b75709;
 }
 
 .card .map .map-content {
