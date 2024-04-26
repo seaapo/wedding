@@ -272,7 +272,6 @@ let _seatmap = [
         groupname: '新娘爸爸恆毅同學2',
         num: 18,
         member: [
-            '陳英傑一家', 
             '徐明', 
             '戴士誠', 
             '費樹城', 
